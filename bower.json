@@ -1,0 +1,13 @@
+{
+  "name": "spire",
+  "homepage": "http:/hydrogene.hu/",
+  "authors": [
+    "Gabor Szabo <szabogabi@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "^6.2.2",
+    "motion-ui": "^1.2.2"
+  }
+}
