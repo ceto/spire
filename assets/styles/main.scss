@@ -1,9 +1,10 @@
-@import "settings";
-
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
 // endbower
+
+
+@import "settings";
 
 @include foundation-everything;
 
