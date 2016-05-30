@@ -20,6 +20,51 @@
     }
   }
 }
+.projectsquare {
+  position: relative;
+  overflow:hidden;
+
+}
+.projectsquare__img {
+  margin:0;
+  padding:0;
+}
+
+.projectsquare__name {
+  margin:0;
+  font-size: 1rem;
+  > a {
+    opacity: 1;
+    color:transparent;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:1rem;
+    background-color: rgba(#000,.5);
+    top:50%;
+    transform:translateY(-50%);
+    &:before, &:after {
+      content:'';
+      display: block;
+      bottom:100%;
+      left:0;
+      width:100%;
+      height:10rem;
+    }
+    &:after {
+      bottom:auto;
+      top:100%;
+    }
+    &:hover, &:focus {
+      opacity: 0;
+      //filter: sepia(1);
+    }
+  }
+}
 
 .card {
 

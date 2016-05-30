@@ -1,0 +1,45 @@
+.top-bar {
+  line-height: 1;
+  width:100%;
+}
+.menu--main {
+  > li {
+    &:not(:last-child){
+      > a {
+        border-right:1px solid scale-color($black, $lightness: 21%);
+      }
+    }
+    > a {
+      white-space: nowrap;
+      background-color: $black;
+      color:$white;
+      text-transform: uppercase;
+      font-size: .75rem;
+      &:hover {
+        background-color: scale-color($black, $lightness: 14%);
+      }
+    }
+  }
+}
+
+.homelogo {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  background-image: url('../images/logo.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:10rem;
+  height:0;
+  padding-bottom:18.518518%;
+  margin:1.333rem 0 1.25rem 2vw;
+  //background-color: red;
+}
+
+.csiki {
+  position: absolute;
+  right:1rem;
+  top:1.75rem;
+}
