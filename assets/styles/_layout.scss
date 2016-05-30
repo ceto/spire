@@ -1,0 +1,11 @@
+.ps {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.ps--dark {
+  background-color: $dark-gray;
+}
+.ps--accent {
+  background-color: $primary-color;
+  color:$white;
+}

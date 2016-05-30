@@ -19,4 +19,6 @@
   // 4. Include ACF
   include_once( get_stylesheet_directory() . '/lib/acf/acf.php' );
 
-  include_once( get_stylesheet_directory() . '/lib/spire-acf.php' );
+  //include_once( get_stylesheet_directory() . '/lib/spire-acf.php' );
+
+  include_once( get_stylesheet_directory() . '/lib/spire-customobjects.php' );

@@ -1,0 +1,77 @@
+.prettytitle {
+  font-weight: $global-weight-bold;
+  margin:0 0 2em;
+  line-height: 1;
+  small {
+    display: block;
+    font-weight: $global-weight-normal;
+    font-size: 100%;
+    color:inherit;
+    line-height: inherit;
+  }
+  span {
+    color:$primary-color;
+  }
+
+  .ps--accent &{
+    color:inherit;
+    span {
+      color:$black;
+    }
+  }
+}
+
+.card {
+
+}
+
+.card__illustration {
+  margin:0 0 .75rem;
+  padding:0;
+}
+
+.membersquare {
+  margin-bottom: 3rem;
+}
+
+.membersquare__photo {
+  margin:0 0 .75rem;
+  padding: 0;
+}
+.membersquare__name {
+  font-size: .875rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.membersquare__jobtitle {
+  font-size: .875rem;
+  line-height: 1.4;
+  font-style: italic;
+  color:$primary-color;
+  margin-bottom: .75rem;
+}
+.membersquare__descr {
+  font-size: .875rem;
+  border-top: 1px solid $primary-color;
+  padding-top: .5rem;
+  p {
+    margin-bottom: .5rem;
+  }
+}
+
+.membersquare__email {
+  font-size: .75rem;
+  color:$black;
+  &.hover, &:focus {
+    color:$primary-color;
+  }
+}
+
+.clientlogo {
+  margin:0 0 1rem;
+  padding:0;
+  figcaption {
+    display: none;
+  }
+}
