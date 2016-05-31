@@ -1,6 +1,9 @@
 .ps {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
+  .page-template-tmpl-home &{
+    min-height: calc(100vh - 4rem);
+  }
 }
 .ps--dark {
   background-color: $dark-gray;

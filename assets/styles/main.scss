@@ -5,7 +5,6 @@
 @import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
 // endbower
 
-
 @import "settings";
 
 @include foundation-everything;
@@ -18,5 +17,6 @@
 @import "layout";
 @import "components";
 @import "owl-theme";
-@import "animation";
+// @import "animation";
+@import "animate";
 

@@ -1,14 +1,14 @@
 <div class="row">
   <div class="columns">
-    <h2 class="prettytitle">
+    <h2 class="prettytitle wow fadeInRight">
       <?php the_field("cl_section_title"); ?>
       <small><?php the_field("cl_section_subtitle"); ?></small>
     </h2>
   </div>
 </div>
 
-<div class="row">
-  <div class="columns medium-10 large-8 medium-push-2">
+<div class="row wow fadeInLeft">
+  <div class="columns tablet-10 large-8 tablet-push-2">
     <div class="row expanded small-up-3 medium-up-4">
       <?php while ( have_rows('clients') ) : the_row(); ?>
         <div class="column">

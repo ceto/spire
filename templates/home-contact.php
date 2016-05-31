@@ -1,13 +1,13 @@
 <div class="row">
   <div class="columns">
-    <h2 class="prettytitle">
+    <h2 class="prettytitle wow fadeInRight">
       Send us a <span>message!</span>
       <small>We’ll definitely reply</small>
     </h2>
   </div>
 </div>
-<div class="row">
-  <div class="columns medium-10 large-8 medium-push-2">
+<div class="row wow fadeInLeft">
+  <div class="columns medium-10 tablet-8 tablet-push-2">
    <form id="contact_form" class="contactform" action="<?= get_template_directory_uri(); ?>/contact_me.php" method="post" data-abide novalidate>
       <div class="row">
         <div class="columns small-6">

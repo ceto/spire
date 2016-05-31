@@ -1,3 +1,9 @@
+.sticky-container {
+  min-height: 72px;
+  @include breakpoint(tablet) {
+    min-height: 4.75rem;
+  }
+}
 .top-bar {
   line-height: 1;
   width:100%;

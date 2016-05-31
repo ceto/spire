@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns">
-    <h2 class="prettytitle">
+    <h2 class="prettytitle wow fadeInRight">
       <?php the_field("people_title"); ?>
       <small><?php the_field("people_subtitle"); ?></small>
     </h2>
@@ -18,9 +18,9 @@
     $the_members = new WP_Query( $args );
   ?>
 
-  <div class="row">
+  <div class="row wow fadeInLeft">
     <div class="columns large-10 large-push-2">
-      <div class="row small-up-2 medium-up-3 large-up-4 xlarge-up-4 xxlarge-up-5 membersgrid">
+      <div class="row small-up-2 medium-up-3 tablet-up-4 xlarge-up-4 xxlarge-up-5 membersgrid">
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
           <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
         <?php endwhile; ?>

@@ -33,7 +33,7 @@
 
   </div>
 
-  <section id="people" class="ps wow animate-boo">
+  <section id="people" class="ps">
     <?php get_template_part('templates/home', 'people'); ?>
   </section>
 

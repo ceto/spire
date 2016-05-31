@@ -78,26 +78,30 @@
 
 $(document).foundation();
 
-// var wow = new WOW();
-// wow.init();
+var wow = new WOW();
+wow.init();
 
 $(function() {
   var wow = new WOW({
     boxClass: 'wow',
-    animateClass: 'is-animating'
+    offset: 120,
   }).init();
 })
 
-$('.menu--main a').on('click', function(e){
- if ($(document).width() < 540 ) {
-   $('#responsive-menu').toggle();
- }
-});
+// $('.menu--main a').on('click', function(e){
+//  if ($(document).width() < 540 ) {
+//    $('#responsive-menu').toggle();
+//  }
+// });
 
 $('.aboutcarousel').owlCarousel({
     // autoplay:true,
     // autoplayHoverPause:true,
-    loop:true,
+    // animateOut: 'fadeOut',
+    // animateIn: 'fadeIn',
+    smartSpeed:500,
+    margin:30,
+    loop:false,
     autoHeight:true,
     items:1,
     nav:true,
@@ -109,6 +113,7 @@ $('.aboutcarousel').owlCarousel({
 
 $('.projectcarousel').owlCarousel({
     //margin:32,
+    smartSpeed:500,
     loop:true,
     autoWidth:true,
     autoHeight:true,
