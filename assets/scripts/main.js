@@ -78,3 +78,58 @@
 
 $(document).foundation();
 
+// var wow = new WOW();
+// wow.init();
+
+$(function() {
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'is-animating'
+  }).init();
+})
+
+$('.menu--main a').on('click', function(e){
+ if ($(document).width() < 540 ) {
+   $('#responsive-menu').toggle();
+ }
+});
+
+$('.aboutcarousel').owlCarousel({
+    // autoplay:true,
+    // autoplayHoverPause:true,
+    loop:true,
+    autoHeight:true,
+    items:1,
+    nav:true,
+    navText: ['<', '>'],
+    itemElement: 'section'
+
+});
+
+
+$('.projectcarousel').owlCarousel({
+    //margin:32,
+    loop:true,
+    autoWidth:true,
+    autoHeight:true,
+    items:1,
+    nav:true,
+    navText: ['<', '>'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:0
+        },
+        1024:{
+            items:2,
+            margin:24
+        },
+        1200:{
+            items:3,
+            margin:32
+        }
+    }
+});
+
+

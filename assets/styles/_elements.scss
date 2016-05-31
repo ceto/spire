@@ -1,0 +1,71 @@
+.contactform {
+  .row {
+    margin-bottom: 1rem;
+  }
+}
+[type=color],
+ [type=date],
+[type=datetime-local],
+[type=datetime],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea {
+  border-bottom: 1px solid currentColor;
+  font-weight: $global-weight-bold;
+  padding:.25em 0;
+  line-height: 1.4;
+  margin-bottom: .75rem;
+  &:focus {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+// input, textarea {
+//   &::-webkit-input-placeholder,
+//   &::-moz-placeholder,
+//   &:-ms-input-placeholder,
+//   &::placeholder {
+//     font-weight: $global-weight-normal;
+//   }
+// }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-weight: $global-weight-normal;
+  transition:all .25s;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-weight: $global-weight-normal;
+  transition:all .25s;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-weight: $global-weight-normal;
+  transition:all .25s;
+}
+input::placeholder, textarea::placeholder {
+  font-weight: $global-weight-normal;
+  transition:all .25s;
+}
+
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color:transparent;
+}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color:transparent;
+}
+input:focus::placeholder, textarea:focus::placeholder {
+  color:transparent;
+}

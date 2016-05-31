@@ -5,22 +5,35 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <section id="work" class="works"></section>
-  <?php get_template_part('templates/home', 'works'); ?>
+  <section id="work" class="works">
+    <?php get_template_part('templates/home', 'works'); ?>
+  </section>
 
-  <div id="intro" class="ps">
-   <?php get_template_part('templates/home', 'intro'); ?>
+  <div id="about" class="">
+
+    <div class="aboutcarousel owl-carousel">
+      <section id="intro" class="ps">
+       <?php get_template_part('templates/home', 'intro'); ?>
+      </section>
+
+      <section id="whatwedo" class="ps">
+        <?php get_template_part('templates/home', 'whatwedo'); ?>
+      </section>
+
+      <section id="process1" class="ps">
+        <?php get_template_part('templates/home', 'designprocess'); ?>
+      </section>
+
+      <section id="process2" class="ps">
+        <?php get_template_part('templates/home', 'designprocess'); ?>
+      </section>
+
+    </div>
+
+
   </div>
 
-  <section id="about" class="ps">
-    <?php get_template_part('templates/home', 'about'); ?>
-  </section>
-
-  <section id="process" class="ps">
-    <?php get_template_part('templates/home', 'designprocess'); ?>
-  </section>
-
-  <section id="people" class="ps">
+  <section id="people" class="ps wow animate-boo">
     <?php get_template_part('templates/home', 'people'); ?>
   </section>
 

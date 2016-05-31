@@ -51,9 +51,9 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #ed6d16,
   secondary: #6c6c6c,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840
+  success: $black,
+  warning: $secondary-color,
+  alert: scale-color(#ed6d16, $lightness: 14%)
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -80,12 +80,13 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 540px,
+  tablet: 768px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large xlarge xxlarge);
+$breakpoint-classes: (small medium tablet large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -94,7 +95,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 30px,
+  large: 30px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -116,9 +117,17 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
+    'h1': 32,
+    'h2': 26,
+    'h3': 20,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),
+  large : (
     'h1': 48,
-    'h2': 40,
-    'h3': 31,
+    'h2': 44,
+    'h3': 30,
     'h4': 25,
     'h5': 20,
     'h6': 16,
@@ -182,11 +191,11 @@ $stat-font-size: 2.5rem;
 // 6. Abide
 // --------
 
-$abide-inputs: true;
+$abide-inputs: false;
 $abide-labels: true;
-$input-background-invalid: map-get($foundation-palette, alert);
-$form-label-color-invalid: map-get($foundation-palette, alert);
-$input-error-color: map-get($foundation-palette, alert);
+$input-background-invalid: transparent;
+$form-label-color-invalid: $black;
+$input-error-color: $white;
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
@@ -261,12 +270,12 @@ $buttongroup-expand-max: 6;
 // -----------
 
 $callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
+$callout-background-fade: 0;
+$callout-border: none;
 $callout-margin: 0 0 1rem 0;
-$callout-padding: 1rem;
-$callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
+$callout-padding: 3rem 15%;
+$callout-font-color: $white;
+$callout-font-color-alt: $secondary-color;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
 
@@ -342,16 +351,16 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $black;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
-$input-background: $white;
-$input-background-focus: $white;
+$input-font-size: rem-calc(14);
+$input-background: transparent;
+$input-background-focus: transparent;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-border: none;
+$input-border-focus: none;
+$input-shadow: none;
+$input-shadow-focus: 2px 3px 0 -2px $black, -2px 3px 0 -2px $black;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
@@ -563,5 +572,5 @@ $topbar-background: $white;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+$topbar-unstack-breakpoint: tablet;
 

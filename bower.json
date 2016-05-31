@@ -8,6 +8,22 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.2.2",
-    "motion-ui": "^1.2.2"
+    "motion-ui": "^1.2.2",
+    "owl.carousel": "owl-carousel2#^2.1.4",
+    "wow": "wow.js#^1.1.2"
+  },
+  "overrides": {
+    "motion-ui": {
+      "main": [
+        "motion-ui.scss",
+        "dist/motion-ui.js"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "src/scss/owl.carousel.scss"
+      ]
+    }
   }
 }

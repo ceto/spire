@@ -9,3 +9,12 @@
   background-color: $primary-color;
   color:$white;
 }
+
+.overexp {
+  margin-left: -.625rem;
+  margin-right: -.625rem;
+  @include breakpoint(large) {
+    margin-left: -.9375rem;
+    margin-right: -.9375rem;
+  }
+}

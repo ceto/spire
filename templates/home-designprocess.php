@@ -6,8 +6,10 @@
     </h2>
   </div>
 </div>
-<div class="row expanded small-up-1 medium-up-2 large-up-3">
-  <?php while ( have_rows('process') ) : the_row(); ?>
+<div class="row expanded overexp small-up-1 medium-up-2 tablet-up-3">
+  <?php
+    $i=0;
+    while ( have_rows('process') && $i++<3 ) : the_row(); ?>
     <div class="column">
       <div class="card">
         <figure class="card__illustration">

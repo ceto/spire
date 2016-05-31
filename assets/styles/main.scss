@@ -1,6 +1,8 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
+@import "../../bower_components/motion-ui/motion-ui.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
 // endbower
 
 
@@ -11,6 +13,10 @@
 @import "wp-classes";
 @import "tinymce";
 
+@import "elements";
 @import "topbar";
 @import "layout";
 @import "components";
+@import "owl-theme";
+@import "animation";
+

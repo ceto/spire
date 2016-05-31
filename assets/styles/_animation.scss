@@ -1,0 +1,13 @@
+.animate-boo {
+  @include mui-animation( slide(in,up), fade(50,100) );
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+// .fade-in {
+//   // A long, long fade
+//   @include mui-fade(in, $duration: 10s);
+// }
+// .wiggle {
+//   animation-duration: 2.5s;
+// }

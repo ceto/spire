@@ -1,0 +1,56 @@
+.projectcarousel {
+  img {
+    //height:12rem;
+    width:100vw !important;
+    max-width: none;
+    @include breakpoint('large') {
+      width:auto !important;
+      max-width: none;
+      min-height: 20rem;
+      height:66.666vh;
+      max-height: 768px;
+    }
+  }
+}
+
+.owl-nav {
+  position: absolute;
+  bottom:0;
+  right:0;
+  background-color: rgba($primary-color,.875);
+  > div {
+    display: inline-block;
+    width:1.75em;
+    height:1.75em;
+    background-color: $primary-color;
+    color: $white;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-top: .25em;
+    &.disabled {
+      background-color: $light-gray;
+      cursor: auto !important;
+      &:hover, &:focus {
+        background-color: $light-gray;
+      }
+    }
+    &:hover, &.focus {
+      background-color: $black;
+    }
+
+  }
+  > div.owl-next {
+    margin-left: 1px;
+  }
+}
+
+.aboutcarousel {
+  .ps {
+    padding-bottom:6rem;
+  }
+  .owl-nav {
+    // bottom:auto;
+    // top:100%;
+  }
+}
