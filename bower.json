@@ -10,7 +10,8 @@
     "foundation-sites": "^6.2.2",
     "motion-ui": "^1.2.2",
     "owl.carousel": "owl-carousel2#^2.1.4",
-    "wow": "wow.js#^1.1.2"
+    "wow": "wow.js#^1.1.2",
+    "waypoints": "^4.0.0"
   },
   "overrides": {
     "motion-ui": {
@@ -23,6 +24,11 @@
       "main": [
         "dist/owl.carousel.js",
         "src/scss/owl.carousel.scss"
+      ]
+    },
+    "waypoints": {
+      "main": [
+        "lib/jquery.waypoints.js"
       ]
     }
   }

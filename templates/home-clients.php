@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="row wow fadeInLeft">
+<div class="row">
   <div class="columns tablet-10 large-8 tablet-push-2">
     <div class="row expanded small-up-3 medium-up-4">
       <?php while ( have_rows('clients') ) : the_row(); ?>

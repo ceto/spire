@@ -78,6 +78,17 @@
 
 $(document).foundation();
 
+
+$.each($('.membersquare, .projectsquare, .clientlogo'), function(i, el){
+  $(el).addClass('fadeInUp wow').attr('data-wow-delay', i%5*125 + 'ms');
+});
+
+var people_wp = $('#people').waypoint({
+  handler: function(direction) {
+
+  }
+})
+
 var wow = new WOW();
 wow.init();
 

@@ -18,7 +18,7 @@
     $the_members = new WP_Query( $args );
   ?>
 
-  <div class="row wow fadeInLeft">
+  <div class="row">
     <div class="columns large-10 large-push-2">
       <div class="row small-up-2 medium-up-3 tablet-up-4 xlarge-up-4 xxlarge-up-5 membersgrid">
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
