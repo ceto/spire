@@ -51,10 +51,10 @@
 
       <div class="row formactions">
         <fieldset class="small-6 columns">
-          <button id="contact_reset" type="reset" class="button secondary">Clear ?</button>
+          <button id="contact_reset" type="reset" class="button success hollow">Clear ?</button>
         </fieldset>
         <fieldset class="small-6 columns text-right">
-          <button id="contact_submit" type="submit" class="button secondary">Send</button>
+          <button id="contact_submit" type="submit" class="button success hollow">Send</button>
         </fieldset>
       </div>
 

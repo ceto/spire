@@ -1,7 +1,30 @@
+.button.hollow {
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-top: transparent !important;
+}
 .contactform {
   .row {
     margin-bottom: 1rem;
   }
+
+  .button.hollow {
+    border-color: currentColor !important;
+    padding-bottom: .5em;
+
+    &:hover, &:focus {
+      color:$white;
+    }
+    &[type=reset] {
+      padding-left: 1px;
+      padding-right: 12.5%;
+    }
+    &[type=submit] {
+      padding-right: 1px;
+      padding-left: 12.5%;
+    }
+  }
+
 }
 [type=color],
  [type=date],

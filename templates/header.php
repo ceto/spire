@@ -1,6 +1,6 @@
 <div data-sticky-container>
   <header class="top-bar" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="main">
-    <div class="row expanded collapse" data-magellan data-bar-offset="47" >
+    <div class="row expanded collapse" data-magellan data-bar-offset="35" >
       <div class="columns">
         <div class="top-bar-title">
           <a class="homelogo" href="<?= esc_url(home_url('/')); ?>">
