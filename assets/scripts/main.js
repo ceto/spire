@@ -87,7 +87,7 @@ var people_wp = $('#people').waypoint({
   handler: function(direction) {
 
   }
-})
+});
 
 var wow = new WOW();
 wow.init();
@@ -97,7 +97,7 @@ $(function() {
     boxClass: 'wow',
     offset: 120,
   }).init();
-})
+});
 
 // $('.menu--main a').on('click', function(e){
 //  if ($(document).width() < 540 ) {
@@ -116,7 +116,7 @@ $('.aboutcarousel').owlCarousel({
     autoHeight:true,
     items:1,
     nav:true,
-    navText: ['<', '>'],
+    navText: ['<i class="icon icon--caret-left">', '<i class="icon icon--caret-right">'],
     itemElement: 'section'
 
 });
@@ -130,7 +130,7 @@ $('.projectcarousel').owlCarousel({
     autoHeight:true,
     items:1,
     nav:true,
-    navText: ['<', '>'],
+    navText: ['<i class="icon icon--caret-left">', '<i class="icon icon--caret-right">'],
     responsiveClass:true,
     responsive:{
         0:{

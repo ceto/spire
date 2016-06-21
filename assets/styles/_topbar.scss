@@ -1,21 +1,56 @@
 .sticky-container {
-  min-height: 72px;
-  // transition:all .4s ease .4s;
   @include breakpoint(tablet) {
-    min-height: 4.75rem;
+    min-height: rem-calc(92);
+  }
+}
+
+.sticky {
+  @include breakpoint(tablet) {
   }
 }
 .top-bar {
   line-height: 1;
   width:100%;
 }
+
+.top-bar-title {
+  @include breakpoint(tablet) {
+  }
+}
+.top-bar-right {
+  float:none;
+  @include breakpoint(tablet) {
+    float:right;
+  }
+}
+
+.responsive-menu {
+  clear:both;
+  @include breakpoint(tablet) {
+    clear:none;
+  }
+}
 .menu--main {
+  text-align: center;
   > li {
-    &:not(:last-child){
-      > a {
-        border-right:1px solid scale-color($black, $lightness: 21%);
+    display: block;
+    float:left;
+    width: 50%;
+    border-right:1px solid scale-color($black, $lightness: 21%);
+    border-bottom:1px solid scale-color($black, $lightness: 21%);
+
+    @include breakpoint(tablet) {
+      display: table-cell;
+      float:none;
+      width:auto;
+      border: none;
+      &:not(:last-child){
+        > a {
+          border-right:1px solid scale-color($black, $lightness: 21%);
+        }
       }
     }
+
     > a {
       white-space: nowrap;
       background-color: $black;
@@ -35,7 +70,9 @@
 }
 
 .top-bar .menu--main {
+  @include clearfix();
   background-color: $black;
+
 }
 
 .homelogo {
@@ -47,12 +84,15 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
-  width:10rem;
+  width:8rem;
   height:0;
   padding-bottom:18.518518%;
-  margin:1.75rem 0 1.666rem 2vw;
-  //background-color: red;
-  //transition:all .4s ease .4s;
+  margin: 1rem 0 .875rem 2vw;
+  @include breakpoint(tablet) {
+    width:10rem;
+    margin:1.75rem 0 1.666rem 2vw;
+  }
+
   .top-bar.is-stuck & {
     width:8rem;
     margin: 1rem 0 .875rem 2vw;
@@ -62,5 +102,5 @@
 .csiki {
   position: absolute;
   right:1rem;
-  top:1.75rem;
+  top:1.125rem;
 }

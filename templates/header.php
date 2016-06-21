@@ -10,7 +10,7 @@
             <button class="menu-icon dark" type="button" data-toggle></button>
           </span>
         </div>
-        <div id="responsive-menu">
+        <div id="responsive-menu" class="responsive-menu">
           <nav class="top-bar-right primarynav">
             <?php
             if (has_nav_menu('primary_navigation')) :
