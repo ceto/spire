@@ -19,8 +19,8 @@
   ?>
 
   <div class="row">
-    <div class="columns large-10 large-push-2">
-      <div class="row small-up-2 medium-up-3 tablet-up-4 xlarge-up-4 xxlarge-up-5 membersgrid">
+    <div class="columns tablet-10 tablet-push-2 large-8 xlarge-10 xxlarge-12 xxlarge-push-0">
+      <div class="row small-up-2 medium-up-3 xlarge-up-4 xxlarge-up-6 membersgrid">
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
           <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
         <?php endwhile; ?>
@@ -30,10 +30,6 @@
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
           <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
         <?php endwhile; ?>
-        <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
-          <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
-        <?php endwhile; ?>
-
       </div>
     </div>
   </div>

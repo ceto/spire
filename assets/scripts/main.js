@@ -116,7 +116,7 @@ $('.aboutcarousel').owlCarousel({
     autoHeight:true,
     items:1,
     nav:true,
-    navText: ['<i class="icon icon--caret-left">', '<i class="icon icon--caret-right">'],
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     itemElement: 'section'
 
 });
@@ -130,7 +130,7 @@ $('.projectcarousel').owlCarousel({
     autoHeight:true,
     items:1,
     nav:true,
-    navText: ['<i class="icon icon--caret-left">', '<i class="icon icon--caret-right">'],
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     responsiveClass:true,
     responsive:{
         0:{

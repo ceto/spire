@@ -1,3 +1,24 @@
+.backtowork {
+  position: absolute;
+  right:0;
+  top:.25rem;
+  display: inline-block;
+  font-size: 1.25rem;
+  color:$black;
+  &:hover, &:focus {
+    color: $primary-color;
+  }
+  @include breakpoint('medium') {
+    right:-12.5%;
+  }
+  @include breakpoint('large') {
+    right:-50%;
+  }
+  @include breakpoint('xlarge') {
+    right:-25%;
+  }
+
+}
 .button.hollow {
   border-left: transparent !important;
   border-right: transparent !important;
@@ -48,6 +69,17 @@ textarea {
   margin-bottom: .75rem;
   &:focus {
     border-bottom: 1px solid currentColor;
+  }
+}
+
+textarea {
+  background-color: $black;
+  color:$white;
+  border-bottom:none;
+  padding:3rem 15%;
+  &:focus {
+    background-color: $black;
+    border-bottom: none;
   }
 }
 
