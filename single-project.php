@@ -7,7 +7,7 @@
           <a href="<?= esc_url(home_url('/')); ?>" class="backtowork">
             <i class="icon icon--times"></i>
           </a>
-          <h1><?php the_title(); ?></h1>
+          <h1 class="pageheader__title"><?php the_title(); ?></h1>
         </header>
         <div class="projectcontent">
           <?php the_content(); ?>

@@ -10,11 +10,14 @@
             <button class="menu-icon dark" type="button" data-toggle></button>
           </span>
         </div>
-        <div id="responsive-menu" class="responsive-menu">
+        <div id="responsive-menu" class="responsive-menu" data-magellan data-threshold="1">
           <nav class="top-bar-right primarynav">
             <?php
             if (has_nav_menu('primary_navigation')) :
-              wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--main']);
+              wp_nav_menu(  array(
+                'theme_location' => 'primary_navigation',
+                'menu_class' => 'menu menu--main',
+                ));
             endif;
             ?>
           </nav>

@@ -19,7 +19,7 @@
           ?>
         </figure>
 
-        <h3 class="card__title"><?php the_sub_field('process_title'); ?></h3>
+        <h4 class="card__title"><?php the_sub_field('process_title'); ?></h4>
         <div class="card__text"><?php the_sub_field('pr_description'); ?></div>
       </div>
     </div>

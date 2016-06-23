@@ -16,7 +16,7 @@
            echo wp_get_attachment_image($image['id'], 'large' );
           ?>
         </figure>
-        <h3 class="card__title"><?php the_sub_field('area_title'); ?></h3>
+        <h4 class="card__title"><?php the_sub_field('area_title'); ?></h4>
         <div class="card__text"><?php the_sub_field('description'); ?></div>
       </div>
     </div>

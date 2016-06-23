@@ -23,6 +23,7 @@
   border-left: transparent !important;
   border-right: transparent !important;
   border-top: transparent !important;
+  font-weight: 400;
 }
 .contactform {
   .row {
@@ -88,25 +89,25 @@ textarea {
 //   &::-moz-placeholder,
 //   &:-ms-input-placeholder,
 //   &::placeholder {
-//     font-weight: $global-weight-normal;
+//     font-weight: 400;
 //   }
 // }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  font-weight: $global-weight-normal;
+  font-weight: 400;
   transition:all .25s;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
-  font-weight: $global-weight-normal;
+  font-weight: 400;
   transition:all .25s;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  font-weight: $global-weight-normal;
+  font-weight: 400;
   transition:all .25s;
 }
 input::placeholder, textarea::placeholder {
-  font-weight: $global-weight-normal;
+  font-weight: 400;
   transition:all .25s;
 }
 

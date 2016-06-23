@@ -1,3 +1,6 @@
+.pageheader__title {
+  color:$primary-color;
+}
 .prettytitle {
   font-weight: $global-weight-bold;
   margin:0 0 4rem;
@@ -106,6 +109,7 @@
   padding: 0;
 }
 .membersquare__name {
+  font-weight: 400;
   font-size: .875rem;
   margin-bottom: 0;
   line-height: 1.4;
@@ -130,6 +134,7 @@
 .membersquare__email {
   font-size: .75rem;
   color:$black;
+  font-weight: 400;
   &.hover, &:focus {
     color:$primary-color;
   }

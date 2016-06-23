@@ -32,6 +32,7 @@
 }
 .menu--main {
   text-align: center;
+  font-weight: 400;
   > li {
     display: block;
     float:left;
@@ -59,6 +60,10 @@
       font-size: .666rem;
       // transition:all .4s ease .4s;
       min-width: rem-calc(95);
+      &.active {
+        color: #ff671f;
+        background: #fff;
+      }
       &:hover {
         background-color: scale-color($black, $lightness: 14%);
       }
