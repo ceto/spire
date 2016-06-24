@@ -1,5 +1,5 @@
 .projectcarousel {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   img {
     //height:12rem;
     width:100vw !important;
@@ -12,6 +12,14 @@
       max-height: 768px;
     }
   }
+}
+#process.ps {
+  padding-bottom: 0;
+}
+.processcarousel {
+  //margin-bottom: 2rem;
+  padding-bottom: 4rem;
+
 }
 
 .owl-nav {

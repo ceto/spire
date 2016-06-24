@@ -20,21 +20,15 @@
         <?php get_template_part('templates/home', 'whatwedo'); ?>
       </section>
 
-      <section id="process1" class="ps">
-        <?php get_template_part('templates/home', 'designprocess'); ?>
-      </section>
-
-      <section id="process2" class="ps">
-        <?php get_template_part('templates/home', 'designprocess'); ?>
-      </section>
 
 
-      <section class="homestylist ps--accent">
+
+      <section class="stylist ps--accent">
         <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bannergraphics.jpg" alt="Inspired">
         <div class="row ps--narrow">
-          <div class="columns medium-6 medium-push-6 large-4 large-push-8 text-right">
-            <h2>Inspired</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident id obcaecati, et officia veritatis aliquam cupiditate necessitatibus quasi voluptas itaque eius quo temporibus porro laboriosam voluptates, ea eaque, recusandae fuga.</p>
+          <div class="columns medium-6 medium-push-6 large-4 large-push-8">
+            <h2 class="styleist__title">Inspired</h3>
+            <div class="styleist__text">results<br>people<br>work<br>clients<br>talent</div>
           </div>
         </div>
       </section>
@@ -42,6 +36,9 @@
 
     </div>
 
+    <section id="process" class="ps">
+      <?php get_template_part('templates/home', 'designprocess'); ?>
+    </section>
 
 
   </section>

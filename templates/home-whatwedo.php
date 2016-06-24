@@ -6,10 +6,10 @@
     </h2>
   </div>
 </div>
-<div class="row expanded overexp small-up-1 medium-up-2 tablet-up-3">
+<div class="row expanded overexp small-up-1 medium-up-2 large-up-4">
   <?php while ( have_rows('areas') ) : the_row(); ?>
     <div class="column">
-      <div class="card">
+      <div class="card card--narrow">
         <figure class="card__illustration">
           <?php
            $image = get_sub_field('illustration');

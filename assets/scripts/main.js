@@ -121,6 +121,36 @@ $('.aboutcarousel').owlCarousel({
 
 });
 
+$('.processcarousel').owlCarousel({
+    //margin:32,
+    smartSpeed:500,
+    //loop:true,
+    //autoWidth:true,
+    autoHeight:true,
+    items:1,
+    nav:true,
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:0
+        },
+        540:{
+            items:2,
+            margin:24
+        },
+        1024:{
+            items:3,
+            margin:32
+        },
+        1600:{
+            items:4,
+            margin:32
+        }
+    }
+});
+
 
 $('.projectcarousel').owlCarousel({
     //margin:32,
