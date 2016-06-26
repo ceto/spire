@@ -61,8 +61,12 @@
       // transition:all .4s ease .4s;
       min-width: rem-calc(95);
       &.active {
-        color: #ff671f;
-        background: #fff;
+        color: $primary-color;
+        background-color: $white;
+        &:hover {
+          cursor: default;
+          background-color: $white;
+        }
       }
       &:hover {
         background-color: scale-color($black, $lightness: 14%);

@@ -1,0 +1,81 @@
+.keyboard {
+  position: fixed;
+  width: 100%;
+  bottom: 30px;
+  z-index: 12;
+  // display: none;
+}
+.keyboard .holder {
+  width: 95px;
+  margin: 0 auto;
+}
+.keyboard .holder .btn {
+  width: 31px;
+  height: 31px;
+  float: left;
+  text-indent: -9999px;
+  box-shadow: 0 0 1px 0 black;
+}
+.keyboard .holder .btn .pressed {
+  display: none;
+  height: 31px;
+  width: 31px;
+}
+.keyboard .holder .btn.up {
+  margin: 0 32px;
+  background: url(../images/spire-sprite.png) -245px -56px no-repeat;
+}
+.keyboard .holder .btn.up .pressed {
+  background: url(../images/spire-sprite.png) -245px -24px no-repeat;
+}
+
+/*
+.keyboard .holder .btn.up:hover {
+  background: url(../images/spire-sprite.png) -245px -24px no-repeat;
+}
+*/
+
+.keyboard .holder .btn.left {
+  margin: 1px 1px 0 0;
+  background: url(../images/spire-sprite.png) -213px -88px no-repeat;
+  float: left;
+}
+.keyboard .holder .btn.left .pressed {
+  background: url(../images/spire-sprite.png) -181px -88px no-repeat;
+}
+
+/*
+.keyboard .holder .btn.left:hover {
+  background: url(../images/spire-sprite.png) -181px -88px no-repeat;
+}
+*/
+
+.keyboard .holder .btn.down {
+  margin: 1px 1px 0 0;
+  background: url(../images/spire-sprite.png) -245px -120px no-repeat;
+  float: left;
+}
+.keyboard .holder .btn.down .pressed {
+  background: url(../images/spire-sprite.png) -245px -88px no-repeat;
+}
+
+/*
+.keyboard .holder .btn.down:hover {
+  background: url(../images/spire-sprite.png) -245px -88px no-repeat;
+}
+*/
+
+.keyboard .holder .btn.right {
+  margin: 1px 0 0 0;
+  background: url(../images/spire-sprite.png) -277px -88px no-repeat;
+  float: left;
+}
+.keyboard .holder .btn.right .pressed {
+  background: url(../images/spire-sprite.png) -309px -88px no-repeat;
+}
+
+/*
+.keyboard .holder .btn.right:hover {
+  background: url(../images/spire-sprite.png) -309px -88px no-repeat;
+}
+*/

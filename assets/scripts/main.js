@@ -83,11 +83,52 @@ $.each($('.membersquare, .projectsquare, .clientlogo'), function(i, el){
   $(el).addClass('fadeInUp wow').attr('data-wow-delay', i%5*125 + 'ms');
 });
 
-var people_wp = $('#people').waypoint({
-  handler: function(direction) {
-
-  }
+$('document').ready(function() {
 });
+
+
+$('.top-bar-right').on('update.zf.magellan', function() {
+  var section = $( $('.primarynav a.active').attr('href') );
+  var prevsection = section.prev('main > section').attr('id');
+  var nextsection = section.next('main > section').attr('id');
+  prevsection = !prevsection?'topmagellan':prevsection;
+  $('.keyboard .btn.up').attr('href','#' + prevsection);
+  $('.keyboard .btn.down').attr('href','#' + nextsection);
+  if (section.attr('id')==='about') {
+    $('.btn.left, .btn.right').attr('data-owltarget','about');
+  };
+  if (section.attr('id')==='process') {
+    $('.btn.left, .btn.right').attr('data-owltarget','process');
+  };
+});
+
+
+$(document.documentElement).keyup(function(event) {
+
+    switch (event.keyCode) {
+      case 38:
+        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .btn.up').attr('href'));
+        $('.keyboard .btn.up').click();
+      break;
+      case 40:
+        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .btn.down').attr('href'));
+        $('.keyboard .btn.down').click();
+      break;
+      case 37:
+        $('.keyboard .btn.left').click();
+      break;
+      case 39:
+        $('.keyboard .btn.right').click();
+      break;
+
+    }
+
+});
+
+
+function magellanrefresh(event) {
+  $('.primarynav').foundation('reflow');
+}
 
 var wow = new WOW();
 wow.init();
@@ -99,13 +140,8 @@ $(function() {
   }).init();
 });
 
-// $('.menu--main a').on('click', function(e){
-//  if ($(document).width() < 540 ) {
-//    $('#responsive-menu').toggle();
-//  }
-// });
 
-$('.aboutcarousel').owlCarousel({
+var aboutcarousel = $('.aboutcarousel').owlCarousel({
     // autoplay:true,
     // autoplayHoverPause:true,
     // animateOut: 'fadeOut',
@@ -117,11 +153,14 @@ $('.aboutcarousel').owlCarousel({
     items:1,
     nav:true,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    itemElement: 'section'
+    itemElement: 'section',
+    onDragged: magellanrefresh,
 
 });
 
-$('.processcarousel').owlCarousel({
+
+
+var processcarousel = $('.processcarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     //loop:true,
@@ -148,11 +187,41 @@ $('.processcarousel').owlCarousel({
             items:4,
             margin:32
         }
-    }
+    },
+    onDragged: magellanrefresh,
 });
 
 
-$('.projectcarousel').owlCarousel({
+$('.btn.up, .btn.down').on('click', function(e){
+  e.preventDefault();
+  $('.primarynav').foundation('scrollToLoc', $(this).attr('href'));
+});
+
+$('.btn.left').on('click', function(e){
+  e.preventDefault();
+  switch ($(this).attr('data-owltarget')) {
+    case 'about':
+       aboutcarousel.trigger('prev.owl.carousel');
+    break;
+    case 'process':
+       processcarousel.trigger('prev.owl.carousel');
+    break;
+  };
+});
+
+$('.btn.right').on('click', function(e){
+  e.preventDefault();
+  switch ($(this).attr('data-owltarget')) {
+    case 'about':
+       aboutcarousel.trigger('next.owl.carousel');
+    break;
+    case 'process':
+       processcarousel.trigger('next.owl.carousel');
+    break;
+  };
+});
+
+var projectcarousel = $('.projectcarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     loop:true,
@@ -175,7 +244,9 @@ $('.projectcarousel').owlCarousel({
             items:3,
             margin:32
         }
-    }
+    },
+    onDragged: magellanrefresh,
 });
+
 
 
