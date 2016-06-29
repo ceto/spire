@@ -35,7 +35,12 @@ use Roots\Sage\Wrapper;
       if (!is_singular('project')) {
         get_template_part('templates/footer');
       }
-      wp_footer();
     ?>
+
+    <?php
+      wp_footer();
+
+    ?>
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/bc037c31-298b-4b05-b108-e9a9f2f6f7ff.js"></script>
   </body>
 </html>

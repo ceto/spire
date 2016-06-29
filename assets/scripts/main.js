@@ -92,13 +92,16 @@ $('.top-bar-right').on('update.zf.magellan', function() {
   var prevsection = section.prev('main > section').attr('id');
   var nextsection = section.next('main > section').attr('id');
   prevsection = !prevsection?'topmagellan':prevsection;
-  $('.keyboard .btn.up').attr('href','#' + prevsection);
-  $('.keyboard .btn.down').attr('href','#' + nextsection);
+  $('.keyboard .button.up').attr('href','#' + prevsection);
+  $('.keyboard .button.down').attr('href','#' + nextsection);
+  $('.keyboard').removeClass('active');
   if (section.attr('id')==='about') {
-    $('.btn.left, .btn.right').attr('data-owltarget','about');
+    $('.button.left, .button.right').attr('data-owltarget','about');
+    $('.keyboard').addClass('active');
   };
   if (section.attr('id')==='process') {
-    $('.btn.left, .btn.right').attr('data-owltarget','process');
+    $('.button.left, .button.right').attr('data-owltarget','process');
+    $('.keyboard').addClass('active');
   };
 });
 
@@ -107,18 +110,18 @@ $(document.documentElement).keyup(function(event) {
 
     switch (event.keyCode) {
       case 38:
-        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .btn.up').attr('href'));
-        $('.keyboard .btn.up').click();
+        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .button.up').attr('href'));
+        $('.keyboard .button.up').click();
       break;
       case 40:
-        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .btn.down').attr('href'));
-        $('.keyboard .btn.down').click();
+        //$('.primarynav').foundation('scrollToLoc', $('.keyboard .button.down').attr('href'));
+        $('.keyboard .button.down').click();
       break;
       case 37:
-        $('.keyboard .btn.left').click();
+        $('.keyboard .button.left').click();
       break;
       case 39:
-        $('.keyboard .btn.right').click();
+        $('.keyboard .button.right').click();
       break;
 
     }
@@ -148,10 +151,10 @@ var aboutcarousel = $('.aboutcarousel').owlCarousel({
     // animateIn: 'fadeIn',
     smartSpeed:500,
     margin:30,
-    loop:false,
     autoHeight:true,
+    loop:true,
     items:1,
-    nav:true,
+    nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     itemElement: 'section',
     onDragged: magellanrefresh,
@@ -163,11 +166,11 @@ var aboutcarousel = $('.aboutcarousel').owlCarousel({
 var processcarousel = $('.processcarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
-    //loop:true,
     //autoWidth:true,
     autoHeight:true,
+    loop:true,
     items:1,
-    nav:true,
+    nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     responsiveClass:true,
     responsive:{
@@ -192,13 +195,14 @@ var processcarousel = $('.processcarousel').owlCarousel({
 });
 
 
-$('.btn.up, .btn.down').on('click', function(e){
+$('.button.up, .button.down').on('click', function(e){
   e.preventDefault();
   $('.primarynav').foundation('scrollToLoc', $(this).attr('href'));
 });
 
-$('.btn.left').on('click', function(e){
+$('.button.left').on('click', function(e){
   e.preventDefault();
+  $(this).focus();
   switch ($(this).attr('data-owltarget')) {
     case 'about':
        aboutcarousel.trigger('prev.owl.carousel');
@@ -209,8 +213,9 @@ $('.btn.left').on('click', function(e){
   };
 });
 
-$('.btn.right').on('click', function(e){
+$('.button.right').on('click', function(e){
   e.preventDefault();
+  $(this).focus();
   switch ($(this).attr('data-owltarget')) {
     case 'about':
        aboutcarousel.trigger('next.owl.carousel');

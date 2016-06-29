@@ -19,6 +19,7 @@
 .processcarousel {
   //margin-bottom: 2rem;
   padding-bottom: 4rem;
+  display: none;
 
 }
 
@@ -64,9 +65,5 @@
     padding-bottom:6rem;
     //background-color: $white;
     overflow:hidden;
-  }
-  .owl-nav {
-    // bottom:auto;
-    // top:100%;
   }
 }
