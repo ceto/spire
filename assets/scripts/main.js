@@ -99,10 +99,10 @@ $('.top-bar-right').on('update.zf.magellan', function() {
     $('.button.left, .button.right').attr('data-owltarget','about');
     $('.keyboard').addClass('active');
   };
-  if (section.attr('id')==='process') {
-    $('.button.left, .button.right').attr('data-owltarget','process');
-    $('.keyboard').addClass('active');
-  };
+  // if (section.attr('id')==='process') {
+  //   $('.button.left, .button.right').attr('data-owltarget','process');
+  //   $('.keyboard').addClass('active');
+  // };
 });
 
 
@@ -128,10 +128,30 @@ $(document.documentElement).keyup(function(event) {
 
 });
 
-
-function magellanrefresh(event) {
+function aboutarrowsupdate(event) {
   $('.primarynav').foundation('reflow');
+  //alert('Page Count:' + event.page.count + 'Page Index:' + event.page.index + 'Page Size:' + event.page.size);
+  if (event.page.index === 1 ) { //whatwedo section is in view
+    $('.button.right').attr('data-owltarget','whatwedo');
+  } else if (event.page.index === 2) { //process section is in view
+    $('.button.right').attr('data-owltarget','process');
+  } else {
+    $('.button.left, .button.right').attr('data-owltarget','about');
+  }
 }
+
+function arrowsupdate(event) {
+  $('.primarynav').foundation('reflow');
+  // alert('Page Count:' + event.page.count + 'Page Index:' + event.page.index + 'Page Size:' + event.page.size);
+  if (event.page.count === (event.page.index + 1) ) { //last pago of carousel
+    //alert('vége');
+    $('.button.right').attr('data-owltarget','about');
+  } else if (event.item.index === 0) { //first item of carousel
+    //alert('eleje');
+    $('.button.left').attr('data-owltarget','about');
+  }
+}
+
 
 var wow = new WOW();
 wow.init();
@@ -153,22 +173,24 @@ var aboutcarousel = $('.aboutcarousel').owlCarousel({
     margin:30,
     autoHeight:true,
     loop:true,
+    mouseDrag:false,
+    touchDrag:false,
+    pullDrag:false,
     items:1,
     nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     itemElement: 'section',
-    onDragged: magellanrefresh,
+    onChanged: aboutarrowsupdate
 
 });
 
 
-
-var processcarousel = $('.processcarousel').owlCarousel({
+var whatwedocarousel = $('.whatwedocarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     //autoWidth:true,
     autoHeight:true,
-    loop:true,
+    loop:false,
     items:1,
     nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
@@ -191,8 +213,43 @@ var processcarousel = $('.processcarousel').owlCarousel({
             margin:32
         }
     },
-    onDragged: magellanrefresh,
+    onChanged: arrowsupdate,
 });
+
+
+var processcarousel = $('.processcarousel').owlCarousel({
+    //margin:32,
+    smartSpeed:500,
+    //autoWidth:true,
+    autoHeight:true,
+    loop:false,
+    items:1,
+    nav:false,
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:0
+        },
+        540:{
+            items:2,
+            margin:24
+        },
+        1024:{
+            items:3,
+            margin:32
+        },
+        1600:{
+            items:4,
+            margin:32
+        }
+    },
+    onChanged: arrowsupdate
+});
+
+
+
 
 
 $('.button.up, .button.down').on('click', function(e){
@@ -207,9 +264,13 @@ $('.button.left').on('click', function(e){
     case 'about':
        aboutcarousel.trigger('prev.owl.carousel');
     break;
+    case 'whatwedo':
+       whatwedocarousel.trigger('prev.owl.carousel');
+    break;
     case 'process':
        processcarousel.trigger('prev.owl.carousel');
     break;
+
   };
 });
 
@@ -219,6 +280,9 @@ $('.button.right').on('click', function(e){
   switch ($(this).attr('data-owltarget')) {
     case 'about':
        aboutcarousel.trigger('next.owl.carousel');
+    break;
+    case 'whatwedo':
+       whatwedocarousel.trigger('next.owl.carousel');
     break;
     case 'process':
        processcarousel.trigger('next.owl.carousel');
@@ -249,8 +313,7 @@ var projectcarousel = $('.projectcarousel').owlCarousel({
             items:3,
             margin:32
         }
-    },
-    onDragged: magellanrefresh,
+    }
 });
 
 

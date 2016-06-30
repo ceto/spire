@@ -48,10 +48,14 @@
 }
 
 .ps.stylist {
+
   padding-top: 0;
   .page-template-tmpl-home &{
-    min-height: auto;
+    min-height: calc(100vh - 3.5rem);
   }
+  // img {
+  //   display: block;
+  // }
 }
 
 .styleist__title {

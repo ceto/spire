@@ -16,14 +16,15 @@
     <section id="whatwedo" class="ps">
       <?php get_template_part('templates/home', 'whatwedo'); ?>
     </section>
+    <section id="process" class="ps">
+      <?php get_template_part('templates/home', 'designprocess'); ?>
+    </section>
     <section class="stylist ps ps--accent">
       <?php  get_template_part('templates/home', 'inspired' ); ?>
     </section>
   </div>
 </section>
-<section id="process" class="ps" data-magellan-target="process">
-  <?php get_template_part('templates/home', 'designprocess'); ?>
-</section>
+
 <section id="people" class="ps" data-magellan-target="people">
   <?php get_template_part('templates/home', 'people'); ?>
 </section>
