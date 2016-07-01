@@ -8,9 +8,6 @@
         <li><a href="#" class="fsocials--behance">
           <i class="icon icon--behance"></i>
         </a></li>
-        <li><a href="#" class="fsocials--facebook">
-          <i class="icon icon--facebook"></i>
-        </a></li>
         <li><a href="#" class="fsocials--linkedin">
           <i class="icon icon--linkedin"></i>
         </a></li>

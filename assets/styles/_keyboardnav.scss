@@ -49,4 +49,63 @@
 }
 
 
+/*******/
+.realkeyboard {
+  position: fixed;
+  width: 50%;
+  left:25%;
+  bottom: 30px;
+  z-index: 12;
+  // display: none;
 
+ .holder {
+    width: 99px;
+    margin: 0 auto;
+  }
+}
+
+.realkeyboard .holder {
+
+.btn {
+  width: 31px;
+  height: 31px;
+  float: left;
+  text-align: center;
+  background-color: rgba($black,.125);
+  color:rgba($white,.875);
+  //box-shadow: 0 0 1px 0 rgba($black,.5);
+  .icon {
+    line-height: 31px;
+    display: inline-block;
+    font-size: .75rem;
+
+  }
+}
+.btn .pressed {
+  display: none;
+  height: 31px;
+  width: 31px;
+}
+.btn.up {
+  margin: 0 33px;
+
+}
+
+.btn.left {
+  margin: 2px 2px 0 0;
+  float: left;
+}
+
+.btn.down {
+  margin: 2px 2px 0 0;
+  float: left;
+}
+.btn.down .pressed {
+}
+
+
+.btn.right {
+  margin: 2px 0 0 0;
+  float: left;
+}
+}

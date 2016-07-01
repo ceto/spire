@@ -5,6 +5,7 @@
 .ps {
   overflow: hidden;
   padding-top: 5rem;
+  padding-top: 10vh;
   padding-bottom: 4rem;
   .page-template-tmpl-home &{
     min-height: calc(100vh - 4rem);
@@ -43,7 +44,7 @@
   }
 }
 .works {
-  background-color: $black;
+  background-color: $white;
   overflow:hidden;
 }
 
@@ -69,3 +70,4 @@
 .styleist__text {
   padding-left: 16rem;
 }
+

@@ -24,7 +24,6 @@
     </section>
   </div>
 </section>
-
 <section id="people" class="ps" data-magellan-target="people">
   <?php get_template_part('templates/home', 'people'); ?>
 </section>
@@ -33,5 +32,6 @@
 </section>
 <section id="contact" class="ps ps--accent" data-magellan-target="contact">
   <?php get_template_part('templates/home', 'contact'); ?>
+  <?php get_template_part('templates/footer'); ?>
 </section>
 <?php endwhile; ?>

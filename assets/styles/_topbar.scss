@@ -1,7 +1,7 @@
 .sticky-container {
-  @include breakpoint(tablet) {
-    min-height: rem-calc(90);
-  }
+  // @include breakpoint(tablet) {
+  //   min-height: rem-calc(90);
+  // }
 }
 
 .sticky {
@@ -71,10 +71,10 @@
       &:hover {
         background-color: scale-color($black, $lightness: 14%);
       }
-      .top-bar.is-stuck & {
-        padding-top:1.5rem;
-        padding-bottom: 1.5rem;
-      }
+      // .top-bar.is-stuck & {
+      //   padding-top:1.5rem;
+      //   padding-bottom: 1.5rem;
+      // }
     }
   }
 }
@@ -95,23 +95,26 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
-  width:8rem;
+  //width:8rem;
+  width:10rem;
+  margin:1.75rem 0 1.666rem 2vw;
+
   height:0;
   padding-bottom:18.518518%;
-  margin: 1rem 0 .875rem 2vw;
+  //margin: 1rem 0 .875rem 2vw;
   @include breakpoint(tablet) {
     width:10rem;
     margin:1.75rem 0 1.666rem 2vw;
   }
 
-  .top-bar.is-stuck & {
-    width:8rem;
-    margin: .9125rem 0 .875rem 2vw;
-  }
+  // .top-bar.is-stuck & {
+  //   width:8rem;
+  //   margin: .9125rem 0 .875rem 2vw;
+  // }
 }
 
 .csiki {
   position: absolute;
   right:1rem;
-  top:1.125rem;
+  top:2.125rem;
 }

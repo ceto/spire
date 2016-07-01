@@ -11,7 +11,7 @@
           </span>
         </div>
         <div id="responsive-menu" class="responsive-menu">
-          <nav class="top-bar-right primarynav" data-magellan data-threshold="0" data-bar-offset="58">
+          <nav class="top-bar-right primarynav" data-magellan data-threshold="0" data-bar-offset="90">
             <?php
             if (has_nav_menu('primary_navigation')) :
               wp_nav_menu(  array(
