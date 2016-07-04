@@ -1,3 +1,17 @@
+body {
+    overflow-x: hidden;
+}
+.document {
+  min-height: calc(100vh - 4rem);
+  transition: opacity .4s linear;
+  &.docfade {
+    opacity: 0;
+    .no-js &{
+      opacity:1;
+    }
+  }
+
+}
 .pageheader {
   position: relative;
 }
@@ -45,6 +59,7 @@
 }
 .works {
   background-color: $white;
+  //background-color: $black;
   overflow:hidden;
 }
 

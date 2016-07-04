@@ -1,5 +1,5 @@
 .projectcarousel {
-  margin-bottom: 2rem;
+  //margin-bottom: 2rem;
   img {
     //height:12rem;
     width:100vw !important;
@@ -67,7 +67,7 @@
   }
 }
 
-.whatwedocarousel, .processcarousel {
+.whatwedocarousel, .processcarousel, .projectcarousel {
   .owl-nav {
     display: none;
     opacity:0;

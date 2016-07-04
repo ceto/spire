@@ -73,6 +73,11 @@ textarea {
   &:focus {
     border-bottom: 1px solid currentColor;
   }
+
+  &.filled {
+    border-bottom: 1px solid currentColor;
+    box-shadow: 2px 3px 0 -2px #000,-2px 3px 0 -2px #000;
+  }
 }
 
 textarea {

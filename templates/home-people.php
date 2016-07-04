@@ -24,12 +24,6 @@
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
           <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
         <?php endwhile; ?>
-        <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
-          <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
-        <?php endwhile; ?>
-        <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
-          <div class="column"><?php get_template_part( 'templates/member', 'square' ); ?></div>
-        <?php endwhile; ?>
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <div class="realkeyboard">
   <nav class="holder">
-    <a href="#work" class="btn up"><i class="icon icon--chevron-up"></i></a>
-    <a href="#" class="btn left" data-owltarget="about"><i class="icon icon--chevron-left"></i></a>
+    <a href="#topmagellan" class="btn up"><i class="icon icon--chevron-up"></i></a>
+    <a href="#" class="btn left" data-owltarget="project"><i class="icon icon--chevron-left"></i></a>
     <a href="#" class="btn down"><i class="icon icon--chevron-down"></i></a>
-    <a href="#" class="btn right" data-owltarget="about"><i class="icon icon--chevron-right"></i></a>
+    <a href="#" class="btn right" data-owltarget="project"><i class="icon icon--chevron-right"></i></a>
   </nav>
 </div>
 
@@ -12,13 +12,13 @@
     <a href="#" class="button up">
       <i class="icon icon--chevron-up"></i>
     </a>
-    <a href="#" class="button left" data-owltarget="about">
+    <a href="#" class="button left" data-owltarget="project">
       <i class="icon icon--chevron-left"></i>
     </a>
     <a href="#" class="button down">
       <i class="icon icon--chevron-down"></i>
     </a>
-    <a href="#" class="button right" data-owltarget="about">
+    <a href="#" class="button right" data-owltarget="project">
       <i class="icon icon--chevron-right"></i>
     </a>
   </nav>

@@ -13,9 +13,6 @@
         <?php while ($the_works->have_posts()) : $the_works->the_post(); ?>
           <div class="column"><?php get_template_part( 'templates/project', 'square' ); ?></div>
         <?php endwhile; ?>
-        <?php while ($the_works->have_posts()) : $the_works->the_post(); ?>
-          <div class="column"><?php get_template_part( 'templates/project', 'square' ); ?></div>
-        <?php endwhile; ?>
       </div>
 
   <?php wp_reset_query(); ?>

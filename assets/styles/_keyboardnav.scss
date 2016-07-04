@@ -9,6 +9,10 @@
   &.active {
     opacity: 1;
   }
+
+  .single-project & {
+    opacity: 1;
+  }
 }
 .keyboard .holder {
   @include clearfix();
@@ -72,19 +76,18 @@
   float: left;
   text-align: center;
   background-color: rgba($black,.125);
-  color:rgba($white,.875);
+  color:rgba($white,.75);
   //box-shadow: 0 0 1px 0 rgba($black,.5);
   .icon {
     line-height: 31px;
     display: inline-block;
     font-size: .75rem;
-
   }
+  //transition: all .2s;
 }
-.btn .pressed {
-  display: none;
-  height: 31px;
-  width: 31px;
+.btn.pressed {
+  color:rgba($primary-color,.75);
+  background-color: rgba($dark-gray,.125);
 }
 .btn.up {
   margin: 0 33px;

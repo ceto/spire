@@ -11,7 +11,8 @@
     "motion-ui": "^1.2.2",
     "owl.carousel": "owl-carousel2#^2.1.4",
     "wow": "wow.js#^1.1.2",
-    "waypoints": "^4.0.0"
+    "waypoints": "^4.0.0",
+    "PACE": "pace#^1.0.2"
   },
   "overrides": {
     "motion-ui": {
