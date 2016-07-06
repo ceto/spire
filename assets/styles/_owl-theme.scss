@@ -4,12 +4,13 @@
     //height:12rem;
     width:100vw !important;
     max-width: none;
-    @include breakpoint('large') {
+    display:block;
+    @include breakpoint('tablet') {
       width:auto !important;
       max-width: none;
-      min-height: 20rem;
+      //min-height: 20rem;
       height:66.666vh;
-      max-height: 768px;
+      max-height: 400px;
     }
   }
 }

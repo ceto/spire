@@ -2,7 +2,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
 
-    <div class="row ps">
+    <div class="row ps projectheadrow">
       <div class="columns medium-10 large-8">
         <header class="pageheader fadeInUp wow">
           <a href="<?= esc_url(home_url('/')); ?>" class="backtowork">
@@ -26,7 +26,7 @@
       if( $the_gallery ): ?>
         <div class="row expanded collapse fadeInUp wow" data-wow-delay="500ms" data-wow-duration="750ms">
           <div class="columns">
-            <aside class="projectcarousel owl-carousel">
+            <aside id="projectcarousel" class="projectcarousel owl-carousel" data-magellan-target="projectcarousel">
               <?php foreach( $the_gallery as $image ): ?>
                 <div class="item">
                   <!-- <a href="<?= $image['url']; ?>"> -->

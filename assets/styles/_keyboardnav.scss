@@ -66,6 +66,10 @@
     width: 99px;
     margin: 0 auto;
   }
+
+  body[data-whatinput="touch"] & {
+    display:none;
+  }
 }
 
 .realkeyboard .holder {

@@ -6,6 +6,21 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+
+  &:after {
+    content:'';
+    display: block;
+    position: fixed;
+    z-index:2001;
+    left:2vw;
+    top:0;
+    height:90px;
+    width:10rem;
+    background-image: url('../images/logo.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .pace-inactive {
@@ -13,11 +28,15 @@
 }
 
 .pace .pace-progress {
-  background: $primary-color;
+  background: $white;
   position: fixed;
   z-index: 2000;
   top: 0;
   right: 100%;
   width: 100%;
-  height: 2px;
+  height: 91px;
+
+  @include breakpoint('tablet') {
+    width: calc(100% -475px);
+  }
 }

@@ -1,8 +1,13 @@
+html {
+  overflow-y: scroll;
+}
 body {
-    overflow-x: hidden;
+  //position:relative;
+  // min-height: 100%;
+  // overflow-x: hidden;
 }
 .document {
-  min-height: calc(100vh - 4rem);
+  //min-height: calc(100vh - 4rem);
   transition: opacity .4s linear;
   &.docfade {
     opacity: 0;
