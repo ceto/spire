@@ -2,6 +2,7 @@
   //color:$primary-color;
 }
 .prettytitle {
+  position: relative;
   color:$black;
   font-weight: $global-weight-bold;
   margin:0 0 4rem;
@@ -51,32 +52,41 @@
 .projectsquare__name {
   margin:0;
   font-size: 1rem;
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
   > a {
     opacity: 1;
+    text-align: center;
+    //color:$black;
     color:transparent;
+    //font-weight: $global-weight-bold;
+    font-size: .75rem;
+    line-height: 1;
+    //color:transparent;
     overflow: hidden;
     display: block;
-    text-align: center;
     position: absolute;
     top:0;
     left:0;
     width:100%;
+    height:100%;
     padding:1rem;
     background-color: rgba(#000,.5);
-    top:50%;
-    transform:translateY(-50%);
-    &:before, &:after {
+    //transform:translateY(-50%);
+    &:before {
       content:'';
       display: block;
-      bottom:100%;
-      left:0;
       width:100%;
-      height:10rem;
+      height:50%;
+      height:calc(100% - .5rem);
     }
-    &:after {
-      bottom:auto;
-      top:100%;
-    }
+    // &:after {
+    //   bottom:auto;
+    //   top:100%;
+    // }
     &:hover, &:focus {
       opacity: 0;
       //filter: sepia(1);

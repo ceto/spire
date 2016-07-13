@@ -9,6 +9,6 @@
 <div class="row wow fadeInLeft">
   <div class="columns medium-10 large-8 medium-push-2">
     <?php get_template_part('templates/content', 'page'); ?>
-    <a class="homeintromore"><i class="icon icon--plus"></i></a>
+    <a href="#" class="homeintromore"><i class="icon icon--plus"></i></a>
   </div>
 </div>

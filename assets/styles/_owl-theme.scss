@@ -21,12 +21,32 @@
   //margin-bottom: 2rem;
   padding-bottom: 4rem;
 
+  .owl-dots {
+    display: none;
+    position: absolute;
+    bottom:2rem;
+    left:0;
+    width: 100%;
+    text-align: center;
+    .owl-dot {
+      display: inline-block;
+      width:1rem;
+      height:1rem;
+      background-color: $primary-color;
+      margin:0 .25rem;
+      &.active {
+
+      }
+    }
+  }
+
 }
 
 .owl-nav {
   position: absolute;
-  bottom:0;
+  bottom:100%;
   right:0;
+  //width:100%;
   //background-color: rgba($primary-color,.875);
   > div {
     display: inline-block;
@@ -35,7 +55,7 @@
     background-color: $primary-color;
     color: $white;
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 1rem;
     line-height: 1;
     padding-top: .5em;
     transition:all .2s;
@@ -70,8 +90,24 @@
 
 .whatwedocarousel, .processcarousel, .projectcarousel {
   .owl-nav {
-    display: none;
-    opacity:0;
-    visibility: 0;
+    // display: none;
+    // opacity:0;
+    // visibility: hidden;
+  }
+}
+
+.whatwedocarousel.owl-carousel {
+  display: block;
+  &.owl-hidden {
+    opacity:1;
+  }
+  .owl-stage-outer {
+    overflow: visible;
+  }
+  .owl-height {
+    transition: height 0s;
+  }
+  .owl-stage {
+    width:100%;
   }
 }

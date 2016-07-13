@@ -37,6 +37,6 @@
   height: 91px;
 
   @include breakpoint('tablet') {
-    width: calc(100% -475px);
+    width: calc(100% - 475px);
   }
 }

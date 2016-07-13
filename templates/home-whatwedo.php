@@ -3,6 +3,7 @@
     <h2 class="prettytitle">
       <?php the_field("sp_section_title"); ?>
       <small><?php the_field("sp_section_subtitle"); ?></small>
+      <a href="#" class="whatwedoclose"><i class="icon icon--times"></i></a>
     </h2>
   </div>
 </div>

@@ -10,11 +10,17 @@
 </section>
 <section id="about" data-magellan-target="about">
   <div class="aboutcarousel owl-carousel">
-    <section id="intro" class="ps">
-      <?php get_template_part('templates/home', 'intro'); ?>
-    </section>
-    <section id="whatwedo" class="ps">
-      <?php get_template_part('templates/home', 'whatwedo'); ?>
+    <section id="intro" class="ps accordion" data-accordion  data-multi-expand="true" data-allow-all-closed="true">
+      <div class="accordion-item is-active" data-accordion-item>
+        <section id="introblock" class="accordion-content" data-tab-content>
+          <?php get_template_part('templates/home', 'intro'); ?>
+        </section>
+      </div>
+      <div class="accordion-item" data-accordion-item>
+        <section id="whatwedo" class="accordion-content" data-tab-content>
+          <?php get_template_part('templates/home', 'whatwedo'); ?>
+        </section>
+      </div>
     </section>
     <section id="process" class="ps">
       <?php get_template_part('templates/home', 'designprocess'); ?>

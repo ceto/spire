@@ -6,9 +6,28 @@
     margin-bottom:0;
   }
 }
+
+
+
+#intro .accordion-content {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
 .homeintromore {
   font-size: 1.5rem;
   margin-top: .5rem;
   float:right;
   color:$black;
+}
+
+.whatwedoclose {
+  position: absolute;
+  font-size: 1.333rem;
+  margin:0;
+  color:$black;
+  top:13%;
+  right:0;
 }

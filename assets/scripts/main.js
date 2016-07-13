@@ -140,6 +140,15 @@ $('document').ready(function() {
 
   resizeProjectCarousel();
 
+
+  //Home intra accordion control
+
+  $('.homeintromore, .whatwedoclose').on('click', function(e) {
+    e.preventDefault();
+    $('#intro').foundation('toggle', $('#introblock'));
+    $('#intro').foundation('toggle', $('#whatwedo'));
+  });
+
 });
 
 $( window ).on('resize', function() {
@@ -240,20 +249,22 @@ $(function() {
 
 
 function processarrowsupdate(event) {
+  $('.btn.left, .btn.right').attr('data-owltarget','process');
   if (event.item.index === 0) { //first item of carousel
     $('.btn.left').attr('data-owltarget','about');
-  } else if (event.page.count === (event.page.index + 1) ) { //last pago of carousel
+  }
+  if (event.page.count === (event.page.index+1) ) { //last pago of carousel
     $('.btn.right').attr('data-owltarget','about');
   }
 }
 
 
 function whatarrowsupdate(event) {
-  if (event.item.index === 0) { //first item of carousel
-    $('.btn.left').attr('data-owltarget','about');
-  } else if (event.page.count === (event.page.index + 1) ) { //last pago of carousel
-    $('.btn.right').attr('data-owltarget','about');
-  }
+  // if (event.item.index === 0) { //first item of carousel
+  //   $('.btn.left').attr('data-owltarget','about');
+  // } else if (event.page.count === (event.page.index + 1) ) { //last pago of carousel
+  //   $('.btn.right').attr('data-owltarget','about');
+  // }
 }
 
 
@@ -265,7 +276,7 @@ $('.whatwedocarousel').owlCarousel({
     // touchDrag:false,
     // pullDrag:false,
     autoHeight:true,
-    loop:false,
+    loop:true,
     items:1,
     nav:true,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
@@ -296,7 +307,7 @@ $('.processcarousel').owlCarousel({
     // touchDrag:false,
     // pullDrag:false,
     autoHeight:true,
-    loop:false,
+    loop:true,
     items:1,
     nav:true,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
@@ -321,17 +332,18 @@ var processcarousel = $('.processcarousel').owlCarousel();
 
 
 function aboutarrowsupdate(event) {
+  //alert(event.page.index);
   switch (event.page.index) {
-    case 1 : //whatwedo section is active
-        $('.button.left, .button.right').attr('data-owltarget','whatwedo');
-        $('.btn.left, .btn.right').attr('data-owltarget','whatwedo');
-    break;
-    case 2: //process section is active
-        $('.button.left, .button.right').attr('data-owltarget','process');
+    // case 1 : //whatwedo section is active
+    //     $('.button.left, .button.right').attr('data-owltarget','whatwedo');
+    //     $('.btn.left, .btn.right').attr('data-owltarget','whatwedo');
+    // break;
+    case 1: //process section is active
+        //$('.button.left, .button.right').attr('data-owltarget','process');
         $('.btn.left, .btn.right').attr('data-owltarget','process');
     break;
     default:
-      $('.button.left, .button.right').attr('data-owltarget','about');
+      //$('.button.left, .button.right').attr('data-owltarget','about');
       $('.btn.left, .btn.right').attr('data-owltarget','about');
   }
 }
@@ -344,7 +356,7 @@ $('.aboutcarousel').owlCarousel({
     smartSpeed:500,
     margin:30,
     autoHeight:true,
-    loop:true,
+    loop:false,
     mouseDrag:false,
     touchDrag:false,
     pullDrag:false,
@@ -384,24 +396,23 @@ $('.btn.left').on('click', function(e){
     case 'about':
       aboutcarousel.trigger('prev.owl.carousel');
     break;
-    case 'whatwedo':
-
-      if ($('.whatwedocarousel .owl-prev').hasClass('disabled')) {
-        //aboutcarousel.trigger('to.owl.carousel', 0);
-        $('.btn.left' ).attr('data-owltarget','about');
-        $(this).click();
-      } else {
-        aboutcarousel.trigger('to.owl.carousel', 2);
-        whatwedocarousel.trigger('prev.owl.carousel');
-      }
-    break;
+    // case 'whatwedo':
+    //   if ($('.whatwedocarousel .owl-prev').hasClass('disabled')) {
+    //     //aboutcarousel.trigger('to.owl.carousel', 0);
+    //     $('.btn.left' ).attr('data-owltarget','about');
+    //     $(this).click();
+    //   } else {
+    //     aboutcarousel.trigger('to.owl.carousel', 2);
+    //     whatwedocarousel.trigger('prev.owl.carousel');
+    //   }
+    // break;
     case 'process':
       if ($('.processcarousel .owl-prev').hasClass('disabled')) {
-        //aboutcarousel.trigger('to.owl.carousel', 1);
         $('.btn.left' ).attr('data-owltarget','about');
         $(this).click();
       } else {
-        aboutcarousel.trigger('to.owl.carousel', 3);
+        //aboutcarousel.trigger('to.owl.carousel', 1);
+        //aboutcarousel.trigger('next.owl.carousel');
         processcarousel.trigger('prev.owl.carousel');
       }
     break;
@@ -422,23 +433,22 @@ $('.btn.right').click(function(e){
     case 'about':
       aboutcarousel.trigger('next.owl.carousel');
     break;
-    case 'whatwedo':
-
-        if ($('.whatwedocarousel .owl-next').hasClass('disabled')) {
-          $('.btn.right' ).attr('data-owltarget','about');
-          $(this).click();
-        } else {
-          aboutcarousel.trigger('to.owl.carousel', 0);
-          whatwedocarousel.trigger('next.owl.carousel');
-        }
-    break;
+    // case 'whatwedo':
+    //     if ($('.whatwedocarousel .owl-next').hasClass('disabled')) {
+    //       $('.btn.right' ).attr('data-owltarget','about');
+    //       $(this).click();
+    //     } else {
+    //       aboutcarousel.trigger('to.owl.carousel', 0);
+    //       whatwedocarousel.trigger('next.owl.carousel');
+    //     }
+    // break;
     case 'process':
-
       if ($('.processcarousel .owl-next').hasClass('disabled')) {
         $('.btn.right' ).attr('data-owltarget','about');
         $(this).click();
       } else {
-        aboutcarousel.trigger('to.owl.carousel', 1);
+        //aboutcarousel.trigger('to.owl.carousel', 0);
+        //aboutcarousel.trigger('prev.owl.carousel');
         processcarousel.trigger('next.owl.carousel');
       }
     break;
@@ -463,7 +473,7 @@ var projectcarousel = $('.projectcarousel').owlCarousel({
     autoWidth:true,
     autoHeight:true,
     items:1,
-    nav:true,
+    nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     responsiveClass:true,
     responsive:{

@@ -1,6 +1,6 @@
 <div class="membersquare">
   <figure class="membersquare__photo">
-    <?php the_post_thumbnail("medium"); ?>
+    <?php the_post_thumbnail("square-thumb"); ?>
   </figure>
   <h3 class="membersquare__name"><?php the_title(); ?></h3>
   <p class="membersquare__jobtitle"><?php the_field('job_title'); ?></p>
