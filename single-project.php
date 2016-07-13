@@ -1,4 +1,3 @@
-<?php get_template_part('templates/project','keyboard'); ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
 
@@ -40,3 +39,4 @@
     <?php endif; ?>
   </article>
 <?php endwhile; ?>
+<?php get_template_part('templates/project','keyboard'); ?>

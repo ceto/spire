@@ -7,11 +7,16 @@
             <?php bloginfo('name'); ?>
           </a>
           <span class="csiki" data-responsive-toggle="responsive-menu" data-hide-for="tablet">
-            <button class="menu-icon dark" type="button" data-toggle></button>
+            <button class="menu-icon" type="button" data-toggle></button>
           </span>
         </div>
         <div id="responsive-menu" class="responsive-menu">
-          <nav class="top-bar-right primarynav" data-magellan data-threshold="0" data-bar-offset="90">
+          <nav class="top-bar-right primarynav"
+            <?php if (is_page_template('tmpl-home.php' )): ?>
+                data-magellan data-threshold="0" data-bar-offset="90"
+            <?php endif ?>
+          >
+
             <?php
             if (has_nav_menu('primary_navigation')) :
               wp_nav_menu(  array(

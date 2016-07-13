@@ -3,7 +3,6 @@
 * Template Name: Home Template
 */
 ?>
-<?php get_template_part('templates/keyboard'); ?>
 <?php while (have_posts()) : the_post(); ?>
 <section id="work" class="works" data-magellan-target="work">
   <?php get_template_part('templates/home', 'works'); ?>
@@ -41,3 +40,4 @@
   <?php get_template_part('templates/footer'); ?>
 </section>
 <?php endwhile; ?>
+<?php get_template_part('templates/keyboard'); ?>

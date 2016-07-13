@@ -109,11 +109,13 @@ $('document').ready(function() {
 
   //tweaking main navigation #-ed elemets on non home pages
   if ( !$('body').hasClass('page-template-tmpl-home') ) {
+    $('.menu-the-work a' ).addClass('active');
     $('.menu-item').each(function() {
       if ( $(this).find('a').attr('href').substring(0, 1) === '#') {
        $(this).find('a').attr('href', $('.homelogo').attr('href') + $(this).find('a').attr('href') );
       }
     });
+    //$('.primarynav').foundation('reflow');
   };
 
   $('input[type=text], input[type=email]').on('change', function(){
@@ -147,6 +149,7 @@ $('document').ready(function() {
     e.preventDefault();
     $('#intro').foundation('toggle', $('#introblock'));
     $('#intro').foundation('toggle', $('#whatwedo'));
+    //$('.keyboard').toggleClass('is-hidden');
   });
 
 });
@@ -191,7 +194,8 @@ $(document.documentElement).keydown(function(event) {
         };
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
           $('.realkeyboard .btn.left').addClass('pressed');
-        }
+        };
+        $('.keyboard .button.left').addClass('pressed');
       break;
       case 39:
         if ($('.primarynav .menu-about a').hasClass('active')) {
@@ -199,7 +203,8 @@ $(document.documentElement).keydown(function(event) {
         };
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
           $('.realkeyboard .btn.right').addClass('pressed');
-        }
+        };
+        $('.keyboard .button.right').addClass('pressed');
       break;
 
     }
@@ -207,12 +212,17 @@ $(document.documentElement).keydown(function(event) {
 
 $(document.documentElement).keyup(function(event) {
     $('.realkeyboard .btn').removeClass('pressed');
+    $('.keyboard .button').removeClass('pressed');
     switch (event.keyCode) {
       case 38:
+      if ( $('body').hasClass('page-template-tmpl-home') ) {
         $('.primarynav').foundation('scrollToLoc', $('.realkeyboard .btn.up').attr('href'));
+      }
       break;
       case 40:
+      if ( $('body').hasClass('page-template-tmpl-home') ) {
         $('.primarynav').foundation('scrollToLoc', $('.realkeyboard .btn.down').attr('href'));
+      }
       break;
       case 37:
         if ($('.primarynav .menu-about a').hasClass('active')) {
@@ -248,27 +258,7 @@ $(function() {
 
 
 
-function processarrowsupdate(event) {
-  $('.btn.left, .btn.right').attr('data-owltarget','process');
-  if (event.item.index === 0) { //first item of carousel
-    $('.btn.left').attr('data-owltarget','about');
-  }
-  if (event.page.count === (event.page.index+1) ) { //last pago of carousel
-    $('.btn.right').attr('data-owltarget','about');
-  }
-}
-
-
-function whatarrowsupdate(event) {
-  // if (event.item.index === 0) { //first item of carousel
-  //   $('.btn.left').attr('data-owltarget','about');
-  // } else if (event.page.count === (event.page.index + 1) ) { //last pago of carousel
-  //   $('.btn.right').attr('data-owltarget','about');
-  // }
-}
-
-
-$('.whatwedocarousel').owlCarousel({
+var whatwedocarousel = $('.whatwedocarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     //autoWidth:true,
@@ -294,12 +284,10 @@ $('.whatwedocarousel').owlCarousel({
             items:3,
             margin:32
         }
-    },
-    onChanged: whatarrowsupdate
+    }
 });
-var whatwedocarousel = $('.whatwedocarousel').owlCarousel();
 
-$('.processcarousel').owlCarousel({
+var processcarousel = $('.processcarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     //autoWidth:true,
@@ -325,49 +313,24 @@ $('.processcarousel').owlCarousel({
             items:3,
             margin:32
         }
-    },
-    onChanged: processarrowsupdate
+    }
+
 });
-var processcarousel = $('.processcarousel').owlCarousel();
 
 
-function aboutarrowsupdate(event) {
-  //alert(event.page.index);
-  switch (event.page.index) {
-    // case 1 : //whatwedo section is active
-    //     $('.button.left, .button.right').attr('data-owltarget','whatwedo');
-    //     $('.btn.left, .btn.right').attr('data-owltarget','whatwedo');
-    // break;
-    case 1: //process section is active
-        //$('.button.left, .button.right').attr('data-owltarget','process');
-        $('.btn.left, .btn.right').attr('data-owltarget','process');
-    break;
-    default:
-      //$('.button.left, .button.right').attr('data-owltarget','about');
-      $('.btn.left, .btn.right').attr('data-owltarget','about');
-  }
-}
-
-
-
-
-
-$('.aboutcarousel').owlCarousel({
+var aboutcarousel = $('.aboutcarousel').owlCarousel({
     smartSpeed:500,
     margin:30,
     autoHeight:true,
-    loop:false,
+    loop:true,
     mouseDrag:false,
     touchDrag:false,
     pullDrag:false,
     items:1,
     nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    itemElement: 'section',
-    onChanged: aboutarrowsupdate
-
+    itemElement: 'section'
 });
-var aboutcarousel=$('.aboutcarousel').owlCarousel();
 
 
 
@@ -394,33 +357,11 @@ $('.btn.left').on('click', function(e){
   var owltarget = $(this).attr('data-owltarget');
   switch (owltarget) {
     case 'about':
-      aboutcarousel.trigger('prev.owl.carousel');
-    break;
-    // case 'whatwedo':
-    //   if ($('.whatwedocarousel .owl-prev').hasClass('disabled')) {
-    //     //aboutcarousel.trigger('to.owl.carousel', 0);
-    //     $('.btn.left' ).attr('data-owltarget','about');
-    //     $(this).click();
-    //   } else {
-    //     aboutcarousel.trigger('to.owl.carousel', 2);
-    //     whatwedocarousel.trigger('prev.owl.carousel');
-    //   }
-    // break;
-    case 'process':
-      if ($('.processcarousel .owl-prev').hasClass('disabled')) {
-        $('.btn.left' ).attr('data-owltarget','about');
-        $(this).click();
-      } else {
-        //aboutcarousel.trigger('to.owl.carousel', 1);
-        //aboutcarousel.trigger('next.owl.carousel');
-        processcarousel.trigger('prev.owl.carousel');
-      }
-    break;
+     aboutcarousel.trigger('prev.owl.carousel');
     case 'project':
-      if ($('.projectcarousel .owl-prev').hasClass('disabled')) {
-
+      if ($('.projectcarousel .owl-next').hasClass('disabled')) {
       } else {
-        projectcarousel.trigger('prev.owl.carousel');
+        projectcarousel.trigger('next.owl.carousel');
       }
     break;
   };
@@ -433,28 +374,8 @@ $('.btn.right').click(function(e){
     case 'about':
       aboutcarousel.trigger('next.owl.carousel');
     break;
-    // case 'whatwedo':
-    //     if ($('.whatwedocarousel .owl-next').hasClass('disabled')) {
-    //       $('.btn.right' ).attr('data-owltarget','about');
-    //       $(this).click();
-    //     } else {
-    //       aboutcarousel.trigger('to.owl.carousel', 0);
-    //       whatwedocarousel.trigger('next.owl.carousel');
-    //     }
-    // break;
-    case 'process':
-      if ($('.processcarousel .owl-next').hasClass('disabled')) {
-        $('.btn.right' ).attr('data-owltarget','about');
-        $(this).click();
-      } else {
-        //aboutcarousel.trigger('to.owl.carousel', 0);
-        //aboutcarousel.trigger('prev.owl.carousel');
-        processcarousel.trigger('next.owl.carousel');
-      }
-    break;
     case 'project':
       if ($('.projectcarousel .owl-next').hasClass('disabled')) {
-
       } else {
         projectcarousel.trigger('next.owl.carousel');
       }

@@ -32,8 +32,10 @@
 
 .responsive-menu {
   clear:both;
+  display: none;
   @include breakpoint(tablet) {
     clear:none;
+    display: block;
   }
 }
 .menu--main {
@@ -113,6 +115,14 @@
 
 .csiki {
   position: absolute;
-  right:1rem;
-  top:2.125rem;
+  right:0;
+  top:0;
+  display: block;
+  width:90px;
+  height:90px;
+  background-color: $black;
+  padding:2.125rem 0 0 2.125rem;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }

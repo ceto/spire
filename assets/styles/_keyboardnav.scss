@@ -17,38 +17,34 @@
 .keyboard .holder {
   @include clearfix();
   position: relative;
-  width: calc(8rem + 4px);
+  font-size: 1.25rem;
+  width: calc(6em + 4px);
   float:right;
 }
 .keyboard {
   .button {
     display: block;
-    height:4rem;
-    width:4rem;
-    line-height: 2rem;
-    font-size: 1.3333rem;
+    height:3em;
+    width:3em;
+    line-height: 3;
+    font-size: 1em;
+    padding:0;
     margin:1px;
     float:left;
     overflow: hidden;
     outline: none;
+    &:hover, &.pressed {
+      color:$primary-color;
+      background-color: $white;
+    }
     .icon {
       display: inline-block;
-      transform:scale(1.333);
+      transform:translateY(.1em) scale(1.333);
     }
     // background-color: rgba($white,.5);
     // box-shadow: 0 0 1px 0 rgba($black,.5);
     // color:$primary-color;
 
-  }
-  .button.up {
-    position: absolute;
-    bottom:100%;
-    left:33.333%;
-    float:none;
-    display: none;
-  }
-  .button.down {
-    display: none;
   }
 }
 
@@ -60,7 +56,7 @@
   left:25%;
   bottom: 30px;
   z-index: 12;
-  // display: none;
+  display: none;
 
  .holder {
     width: 99px;
