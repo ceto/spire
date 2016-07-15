@@ -118,6 +118,11 @@ input::placeholder, textarea::placeholder {
   transition:all .25s;
 }
 
+textarea::-webkit-input-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea::-moz-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea:-ms-input-placeholder { color:$white; font-weight: $global-weight-bold; }
+textarea::placeholder { color:$white; font-weight: $global-weight-bold; }
+
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
   color:transparent;

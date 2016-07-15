@@ -1,6 +1,10 @@
 <?php
 
+
+
+
 namespace Roots\Soil\JqueryCDN;
+use Roots\Sage\Assets;
 
 /**
  * Load jQuery from jQuery's CDN with a local fallback
@@ -40,7 +44,9 @@ function jquery_local_fallback($src, $handle = null) {
   }
 
   if ($handle === 'jquery') {
-    $add_jquery_fallback = apply_filters('script_loader_src', \get_template_directory_uri().'/dist/scripts/jquery.js', 'jquery-fallback');
+    // $add_jquery_fallback = apply_filters('script_loader_src', \get_template_directory_uri().'/dist/scripts/jquery.js', 'jquery-fallback');
+    $add_jquery_fallback = apply_filters('script_loader_src', Assets\asset_path('scripts/jquery.js'), 'jquery-fallback');
+
   }
 
   return $src;

@@ -37,8 +37,8 @@
       <div class="row">
         <div class="columns">
           <label for="message_text">
-            <textarea required placeholder="Start typing here..." rows="3" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
-              echo $_POST['message_text']; }?>_</textarea>
+            <textarea required placeholder="&mdash;" rows="3" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
+              echo $_POST['message_text']; }?></textarea>
             <small class="form-error">Required field</small>
           </label>
         </div>
