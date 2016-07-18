@@ -4,8 +4,8 @@
   require( '../../../wp-load.php' );
 
 if($_POST) {
-  $to_Email = "szabogabi@gmail.com";
-  $subject = 'Sperie Web Message';
+  $to_Email = "tom@spirecreative.com";
+  $subject = 'Spire Web Message';
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
