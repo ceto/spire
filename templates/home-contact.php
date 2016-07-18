@@ -45,12 +45,12 @@
       </div>
 
       <div id="result"></div>
-      <div data-abide-error class="alert callout" style="display: none;">
+<!--       <div data-abide-error class="alert callout" style="display: none;">
         <p>There are some errors in your form.</p>
       </div>
       <div data-abide-error class="success callout" style="display: none;">
         <p><strong>Dear Friend</strong><br>Your message has been successfully sent. We will contact you very soon!</p>
-      </div>
+      </div> -->
 
       <input type="hidden" name="ap_id" value="<?php echo $subjecto; ?>">
       <input type="hidden" name="message_page" value="<?php the_title(); ?>">
