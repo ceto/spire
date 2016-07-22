@@ -384,10 +384,7 @@ $('.btn.left').on('click', function(e){
      aboutcarousel.trigger('prev.owl.carousel');
     break;
     case 'project':
-      if ($('.projectcarousel .owl-next').hasClass('disabled')) {
-      } else {
-        projectcarousel.trigger('next.owl.carousel');
-      }
+      projectcarousel.trigger('prev.owl.carousel');
     break;
   }
 });
@@ -400,10 +397,7 @@ $('.btn.right').click(function(e){
       aboutcarousel.trigger('next.owl.carousel');
     break;
     case 'project':
-      if ($('.projectcarousel .owl-next').hasClass('disabled')) {
-      } else {
-        projectcarousel.trigger('next.owl.carousel');
-      }
+      projectcarousel.trigger('next.owl.carousel');
     break;
   }
 });

@@ -38,7 +38,23 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
-  add_image_size( 'square-thumb', '640', '640', true );
+
+  update_option('thumbnail_size_w', 640);
+  update_option('thumbnail_size_h', 640);
+  update_option('thumbnail_crop', 1);
+
+  update_option('medium_size_w', 1280);
+  update_option('medium_size_h', 9999);
+  //update_option('medium_crop', 0);
+
+  update_option('large_size_w', 1920);
+  update_option('large_size_h', 9999);
+  //update_option('large_crop', 0);
+
+  add_image_size( 'largethumb', '1024', '1024', true );
+
+  //add_image_size( 'xlarge', '1280', '9999', false );
+
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats

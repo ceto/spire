@@ -15,7 +15,7 @@
             <figure class="card__illustration">
               <?php
                $image = get_sub_field('illustration');
-               echo wp_get_attachment_image($image['id'], 'large' );
+               echo wp_get_attachment_image($image['id'], 'medium' );
               ?>
             </figure>
             <h4 class="card__title"><?php the_sub_field('area_title'); ?></h4>

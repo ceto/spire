@@ -14,8 +14,26 @@
         </div>
         <footer class="fadeInUp wow" data-wow-delay="1250ms" data-wow-duration="500ms">
           <nav class="projectnav">
-            <?php previous_post_link('%link', '<i class="icon icon--chevron-left"></i> %title', FALSE) ?> |
-            <?php next_post_link('%link', '%title <i class="icon icon--chevron-right"></i>', FALSE) ?>
+           <?php
+            /**
+             *  Infinite next and previous post looping in WordPress
+             */
+            if( get_adjacent_post(false, '', true) ) {
+              previous_post_link('%link', '<i class="icon icon--chevron-left"></i> %title', FALSE);
+            } else {
+                $first = new WP_Query('post_type=project&posts_per_page=1&order=DESC'); $first->the_post();
+                  echo '<a href="' . get_permalink() . '" rel="prev"><i class="icon icon--chevron-left"></i> '.get_the_title().'</a>';
+                wp_reset_query();
+            };
+              echo " | ";
+            if( get_adjacent_post(false, '', false) ) {
+              next_post_link('%link', '%title <i class="icon icon--chevron-right"></i>', FALSE);
+            } else {
+              $last = new WP_Query('post_type=project&posts_per_page=1&order=ASC'); $last->the_post();
+                  echo '<a href="' . get_permalink() . '" rel="next">'.get_the_title().' <i class="icon icon--chevron-right"></i></a>';
+                wp_reset_query();
+            };
+          ?>
           </nav>
         </footer>
       </div>
