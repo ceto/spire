@@ -7,20 +7,12 @@
 <section id="work" class="works" data-magellan-target="work">
   <?php get_template_part('templates/home', 'works'); ?>
 </section>
-<section id="about" data-magellan-target="about">
+<section id="about" class="ps" data-magellan-target="about">
+  <?php get_template_part('templates/home', 'whatwedo'); ?>
+</section>
+
+<section id="approach" data-magellan-target="approach">
   <div class="aboutcarousel owl-carousel">
-    <section id="intro" class="ps accordion" data-accordion  data-multi-expand="true" data-allow-all-closed="true">
-      <div class="accordion-item is-active" data-accordion-item>
-        <section id="introblock" class="accordion-content" data-tab-content>
-          <?php get_template_part('templates/home', 'intro'); ?>
-        </section>
-      </div>
-      <div class="accordion-item" data-accordion-item>
-        <section id="whatwedo" class="accordion-content" data-tab-content>
-          <?php get_template_part('templates/home', 'whatwedo'); ?>
-        </section>
-      </div>
-    </section>
     <section id="process" class="ps">
       <?php get_template_part('templates/home', 'designprocess'); ?>
     </section>
@@ -29,6 +21,8 @@
     </section>
   </div>
 </section>
+
+
 <section id="people" class="ps" data-magellan-target="people">
   <?php get_template_part('templates/home', 'people'); ?>
 </section>

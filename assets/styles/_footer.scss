@@ -15,11 +15,16 @@
 
 
 .sitefooter {
+  font-size: .875rem;
   padding-top: 2rem;
+  font-weight: $global-weight-bold;
   padding-bottom: 2rem;
   .page-template-tmpl-home &{
-    padding-top: 5vh;
+    padding-top: 6vh;
     min-height: 4rem;
+  }
+  span {
+    color: $black;
   }
 }
 

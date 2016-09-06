@@ -8,18 +8,18 @@
 </div>
 <div class="row wow fadeInLeft">
   <div class="columns medium-10 medium-push-1 tablet-8 tablet-push-2">
-   <form id="contact_form" class="contactform" action="<?= get_template_directory_uri(); ?>/contact_me.php" method="post" data-abide novalidate>
+   <form id="contact_form" class="contactform" action="<?= get_template_directory_uri(); ?>/contact_me.php" method="post" data-abide novalidate autocomplete="off">
       <div class="row">
         <div class="columns small-6">
           <label for="message_name">
-            <input type="text" required placeholder="Add Your name" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>">
+            <input type="text" required placeholder="Add Your name" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>" autocomplete="off">
             <small class="form-error">Name is required</small>
           </label>
         </div>
 
         <div class="columns small-6">
           <label for="message_email">
-            <input type="email" required placeholder="E-mail address" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
+            <input type="email" required placeholder="E-mail address" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>" autocomplete="off">
             <small class="form-error">E-mail is required</small>
           </label>
         </div>
@@ -29,7 +29,7 @@
       <div class="row">
         <div class="columns small-6">
           <label for="message_subject">
-            <input type="email" required placeholder="Subject" id="message_subject" name="message_subject" value="<?php echo $_POST['message_subject']; ?>">
+            <input type="email" required placeholder="Subject" id="message_subject" name="message_subject" value="<?php echo $_POST['message_subject']; ?>" autocomplete="off">
           </label>
         </div>
       </div>
@@ -37,8 +37,9 @@
       <div class="row">
         <div class="columns">
           <label for="message_text">
-            <textarea required placeholder="&mdash;" rows="3" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
-              echo $_POST['message_text']; }?></textarea>
+            <textarea required placeholder="&mdash;" rows="3" id="message_text" name="message_text" autocomplete="off">
+              <?php if ($_POST['message_text']!='') { echo $_POST['message_text']; }?>
+            </textarea>
             <small class="form-error">Required field</small>
           </label>
         </div>

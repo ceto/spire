@@ -12,7 +12,8 @@
     "owl.carousel": "owl-carousel2#^2.1.4",
     "wow": "wow.js#^1.1.2",
     "waypoints": "^4.0.0",
-    "PACE": "pace#^1.0.2"
+    "PACE": "pace#^1.0.2",
+    "magnific-popup": "^1.1.0"
   },
   "overrides": {
     "motion-ui": {
@@ -25,6 +26,12 @@
       "main": [
         "dist/owl.carousel.js",
         "src/scss/owl.carousel.scss"
+      ]
+    },
+    "magnific-popup": {
+      "main": [
+        "dist/jquery.magnific-popup.js",
+        "src/css/main.scss"
       ]
     },
     "waypoints": {

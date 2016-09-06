@@ -1,5 +1,6 @@
 .pageheader__title {
   //color:$primary-color;
+  margin-bottom: 0;
 }
 .prettytitle {
   position: relative;
@@ -111,6 +112,15 @@
       font-size: 1.25rem;
     }
   }
+  .card--simple & {
+    padding:0;
+  }
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color: $primary-color;
+    }
+  }
 }
 
 .card__text {
@@ -126,6 +136,9 @@
     @include breakpoint(xlarge) {
       font-size: .875rem;
     }
+  }
+  .card--simple & {
+    padding:0;
   }
 }
 
@@ -192,6 +205,13 @@
   }
 }
 
+
+.projectcontent {
+  > p:first-child{
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+}
 .projectnav {
   @include clearfix();
   //border-top: 1px solid $light-gray;
