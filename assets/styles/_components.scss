@@ -102,6 +102,11 @@
 .card__illustration {
   margin:0 0 1rem;
   padding:0;
+  a {
+    [data-whatinput=mouse] & {
+      outline:0;
+    }
+  }
 }
 
 .card__title {

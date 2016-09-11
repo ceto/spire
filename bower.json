@@ -30,8 +30,7 @@
     },
     "magnific-popup": {
       "main": [
-        "dist/jquery.magnific-popup.js",
-        "src/css/main.scss"
+        "dist/jquery.magnific-popup.js"
       ]
     },
     "waypoints": {

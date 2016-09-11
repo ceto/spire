@@ -95,7 +95,8 @@ $('document').ready(function() {
     delegate: 'a.popimg',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
+    mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
+    closeBtnInside: false,
     gallery: {
       enabled: true,
       navigateByImgClick: true,
@@ -104,7 +105,7 @@ $('document').ready(function() {
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       titleSrc: function(item) {
-        return item.el.attr('title') + '<small>by Spire</small>';
+        return item.el.attr('title');
       }
     }
   });
@@ -147,7 +148,7 @@ $(document.documentElement).keydown(function(event) {
         $('.realkeyboard .btn.down').addClass('pressed');
       break;
       case 37:
-        if ($('.primarynav .menu-about a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.left').addClass('pressed');
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
@@ -156,7 +157,7 @@ $(document.documentElement).keydown(function(event) {
         $('.keyboard .button.left').addClass('pressed');
       break;
       case 39:
-        if ($('.primarynav .menu-about a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.right').addClass('pressed');
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
@@ -183,7 +184,7 @@ $(document.documentElement).keyup(function(event) {
       }
       break;
       case 37:
-        if ($('.primarynav .menu-about a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.left').click();
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
@@ -191,7 +192,7 @@ $(document.documentElement).keyup(function(event) {
         }
       break;
       case 39:
-        if ($('.primarynav .menu-about a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.right').click();
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {

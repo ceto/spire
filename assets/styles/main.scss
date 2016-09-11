@@ -1,12 +1,10 @@
 @import "settings";
-@import "mfpsettings";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
 @import "../../bower_components/motion-ui/motion-ui.scss";
 @import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
-@import "../../bower_components/magnific-popup/src/css/main.scss";
 // endbower
 
 
@@ -16,7 +14,7 @@
 @import "icons";
 @import "wp-classes";
 @import "tinymce";
-
+@import "mfp";
 @import "pace";
 @import "elements";
 @import "topbar";
