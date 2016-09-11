@@ -15,7 +15,10 @@
 $(document).foundation();
 
 Pace.on('done', function() {
-  $('.top-bar').removeClass('darkened');
+  $('.thecover').addClass('opening');
+});
+Pace.on('hide', function() {
+  $('.thecover').addClass('rejtve');
 });
 
 $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
@@ -66,14 +69,15 @@ $('document').ready(function() {
     if ( ($(this).attr('href').substr(0,1)!=='#') && ($(this).attr('href').substr(0,6)!=='mailto') && (!$(this).hasClass('popimg'))
         ) {
       e.preventDefault();
-      $('.top-bar').addClass('darkened');
-      $('.document').addClass('docfade');
+      $('.thecover').removeClass('rejtve');
+      $('.thecover').removeClass('opening');
+      //$('.document').addClass('docfade');
       window.location.href = $(this).attr('href');
     }
   });
 
 
-  $('.document').removeClass('docfade');
+  //$('.document').removeClass('docfade');
 
 
   resizeProjectCarousel();
@@ -109,6 +113,28 @@ $('document').ready(function() {
       }
     }
   });
+
+  //project Gallery popup
+  $('.projectcarousel').magnificPopup({
+    delegate: 'a.popimg',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
+    closeBtnInside: false,
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title');
+      }
+    }
+  });
+
+
 
 
 });
@@ -187,7 +213,7 @@ $(document.documentElement).keyup(function(event) {
         if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.left').click();
         }
-        if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
+        if ($('body').hasClass('single-project')) {
           $('.realkeyboard .btn.left').click();
         }
       break;
@@ -195,7 +221,7 @@ $(document.documentElement).keyup(function(event) {
         if ($('.primarynav .menu-approach a').hasClass('active')) {
           $('.realkeyboard .btn.right').click();
         }
-        if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
+        if ($('body').hasClass('single-project')) {
           $('.realkeyboard .btn.right').click();
         }
       break;
@@ -246,7 +272,7 @@ var whatwedocarousel = $('.whatwedocarousel').owlCarousel({
     }
 });
 
-var processcarousel = $('.processcarousel').owlCarousel({
+var approachcarousel = $('.approachcarousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
     //autoWidth:true,
@@ -256,20 +282,20 @@ var processcarousel = $('.processcarousel').owlCarousel({
     autoHeight:true,
     loop:true,
     items:1,
-    nav:true,
+    nav:false,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     responsiveClass:true,
     responsive:{
         0:{
             items:1,
-            margin:0
+            margin:24
         },
         768:{
-            items:2,
+            items:1,
             margin:24
         },
         1024:{
-            items:2,
+            items:1,
             margin:32
         }
     }
@@ -339,8 +365,8 @@ $('.btn.left').on('click', function(e){
   e.preventDefault();
   var owltarget = $(this).attr('data-owltarget');
   switch (owltarget) {
-    case 'about':
-     aboutcarousel.trigger('prev.owl.carousel');
+    case 'approach':
+     approachcarousel.trigger('prev.owl.carousel');
     break;
     case 'project':
       projectcarousel.trigger('prev.owl.carousel');
@@ -352,8 +378,8 @@ $('.btn.right').click(function(e){
   e.preventDefault();
   var owltarget = $(this).attr('data-owltarget');
   switch (owltarget) {
-    case 'about':
-      aboutcarousel.trigger('next.owl.carousel');
+    case 'approach':
+      approachcarousel.trigger('next.owl.carousel');
     break;
     case 'project':
       projectcarousel.trigger('next.owl.carousel');

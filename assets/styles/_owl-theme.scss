@@ -13,6 +13,11 @@
       max-height: 400px;
     }
   }
+  a.popimg {
+    [data-whatinput=mouse] & {
+      outline:0;
+    }
+  }
 }
 #process.ps {
   padding-bottom: 0;

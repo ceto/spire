@@ -15,7 +15,8 @@
           <figure class="card__illustration">
             <?php
               $image = get_sub_field('illustration');
-              $popimg = wp_get_attachment_image_src($image['id'], 'full' );
+              $popimage = get_sub_field('popup_image');
+              $popimg = wp_get_attachment_image_src($popimage['id'], 'full' );
             ?>
             <a class="popimg" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>">
               <?= wp_get_attachment_image($image['id'], 'medium' ); ?>

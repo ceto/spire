@@ -1,11 +1,16 @@
 html {
   overflow-y: scroll;
+  //background-color: $primary-color;
 }
 body {
-  //position:relative;
+  // position:relative;
   // min-height: 100%;
   // overflow-x: hidden;
 }
+
+
+
+
 .document {
   //min-height: calc(100vh - 4rem);
   transition: opacity .4s linear;

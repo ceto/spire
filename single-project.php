@@ -46,9 +46,9 @@
             <aside id="projectcarousel" class="projectcarousel owl-carousel" data-magellan-target="projectcarousel">
               <?php foreach( $the_gallery as $image ): ?>
                 <div class="item">
-                  <!-- <a href="<?= $image['url']; ?>"> -->
+                  <a class="popimg" href="<?= $image['url']; ?>" title="<?php the_title(); ?>">
                     <?= wp_get_attachment_image($image['id'], 'large' ); ?>
-                  <!-- </a> -->
+                  </a>
                 </div>
               <?php endforeach; ?>
             </aside>

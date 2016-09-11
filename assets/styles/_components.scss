@@ -102,7 +102,7 @@
 .card__illustration {
   margin:0 0 1rem;
   padding:0;
-  a {
+  a.popimg {
     [data-whatinput=mouse] & {
       outline:0;
     }
@@ -244,4 +244,5 @@
     font-size: .666em;
   }
 }
+
 

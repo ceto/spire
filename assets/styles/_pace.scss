@@ -6,21 +6,6 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-
-  &:after {
-    content:'';
-    display: block;
-    position: fixed;
-    z-index:2001;
-    left:2vw;
-    top:0;
-    height:90px;
-    width:10rem;
-    background-image: url('../images/logo.svg');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 }
 
 .pace-inactive {
@@ -28,16 +13,51 @@
 }
 
 .pace .pace-progress {
-  background: $white;
+  background: white;
   position: fixed;
   z-index: 2000;
-  top: 0;
+  top: 50%;
   right: 100%;
   width: 100%;
-  width: calc(100% - 90px);
-  height: 91px;
+  height: 1px;
+
 
   @include breakpoint('tablet') {
-    width: calc(100% - 475px);
+    //width: calc(100% - 475px);
+  }
+}
+
+
+.thecover {
+  z-index:1999;
+  position: fixed;
+  left:0;top:0;
+  width:100%;
+  height:100%;
+  //background-color: $primary-color;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    width:100%;
+    height:50%;
+    background-color: $primary-color;
+    transition:height .6s ease;
+  }
+  &:before {
+    top:0;
+  }
+  &:after {
+    bottom:0;
+    background-color: $primary-color;
+  }
+
+  &.opening {
+    &:before, &:after {
+      height:0;
+    }
+  }
+  &.rejtve {
+    pointer-events: none;
   }
 }
