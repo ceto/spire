@@ -76,12 +76,7 @@ body {
 .ps.stylist {
 
   padding-top: 0;
-  .page-template-tmpl-home &{
-    min-height: calc(100vh - 3.5rem);
-  }
-  // img {
-  //   display: block;
-  // }
+  min-height: calc(100vh - 3.5rem);
 }
 
 .styleist__title {
@@ -90,8 +85,20 @@ body {
   font-size: 3rem;
   margin-bottom: 0;
   margin-top:5vh;
-  padding-left: 5rem;
+  margin-left: 26%;
+
+  //background-color: red;
+  height:1em;
+  width:11rem;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/inspired.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .styleist__text {
   padding-left: 16rem;
 }
