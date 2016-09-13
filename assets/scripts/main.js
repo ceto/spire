@@ -24,7 +24,7 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
   Pace.on('done', function() {
     $('.top-bar').removeClass('darkened');
   });
-};
+}
 
 
 $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
