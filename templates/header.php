@@ -1,5 +1,5 @@
 <div data-sticky-container>
-  <header class="top-bar" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="main">
+  <header class="top-bar darkened" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="main">
     <div id="topmagellan" class="row expanded collapse">
       <div class="columns">
         <div class="top-bar-title">

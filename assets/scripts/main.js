@@ -14,12 +14,17 @@
 
 $(document).foundation();
 
-Pace.on('done', function() {
-  $('.thecover').addClass('opening');
-});
-Pace.on('hide', function() {
-  $('.thecover').addClass('rejtve');
-});
+
+  Pace.on('done', function() {
+    $('.top-bar').removeClass('darkened');
+  });
+
+// Pace.on('done', function() {
+//   $('.thecover').addClass('opening');
+// });
+// Pace.on('hide', function() {
+//   $('.thecover').addClass('rejtve');
+// });
 
 $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
   $(el).addClass('fadeInUp wow').attr('data-wow-delay', i%5*125 + 'ms');
@@ -69,15 +74,16 @@ $('document').ready(function() {
     if ( ($(this).attr('href').substr(0,1)!=='#') && ($(this).attr('href').substr(0,6)!=='mailto') && (!$(this).hasClass('popimg'))
         ) {
       e.preventDefault();
-      $('.thecover').removeClass('rejtve');
-      $('.thecover').removeClass('opening');
-      //$('.document').addClass('docfade');
+      // $('.thecover').removeClass('rejtve');
+      // $('.thecover').removeClass('opening');
+      $('.top-bar').addClass('darkened');
+      $('.document').addClass('docfade');
       window.location.href = $(this).attr('href');
     }
   });
 
 
-  //$('.document').removeClass('docfade');
+  $('.document').removeClass('docfade');
 
 
   resizeProjectCarousel();
