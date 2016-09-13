@@ -3,7 +3,7 @@
     <div id="topmagellan" class="row expanded collapse">
       <div class="columns">
         <div class="top-bar-title">
-          <a class="homelogo" href="<?= the_permalink(45); ?>">
+          <a class="homelogo" href="<?= esc_url(home_url('/')); ?>" data-realhome="<?php the_permalink(45); ?>">
             <?php bloginfo('name'); ?>
           </a>
           <span class="csiki" data-responsive-toggle="responsive-menu" data-hide-for="tablet">
