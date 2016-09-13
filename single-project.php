@@ -4,7 +4,7 @@
     <div class="row ps projectheadrow">
       <div class="columns medium-10 large-8">
         <header class="pageheader fadeInUp wow">
-          <a href="<?= esc_url(home_url('/')); ?>" class="backtowork">
+          <a href="<?= the_permalink(45); ?>" class="backtowork">
             <i class="icon icon--times"></i>
           </a>
           <h1 class="pageheader__title"><?php the_title(); ?></h1>
