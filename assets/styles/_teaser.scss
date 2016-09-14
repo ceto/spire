@@ -1,0 +1,35 @@
+.ps.lala {
+  //position: relative;
+  //min-height: calc(100vh - 4rem);
+  //overflow: hidden;
+
+  .columns {
+    //overflow: hidden;
+  }
+}
+.teaser {
+  margin-top: 3vh;
+  font-size: 2rem;
+  font-weight: $global-weight-bold;
+
+  @include breakpoint('tablet') {
+    font-size: 4rem;
+  }
+}
+.typewriter {
+  color:$black;
+  &:hover, &:focus {
+    color:$primary-color;
+  }
+}
+
+.typed-cursor{
+    opacity: 1;
+    color:$primary-color;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

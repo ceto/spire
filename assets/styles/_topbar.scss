@@ -37,6 +37,10 @@
     clear:none;
     display: block;
   }
+
+  .page-template-tmpl-landing & {
+    display: none !important;
+  }
 }
 .menu--main {
   text-align: center;

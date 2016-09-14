@@ -11,6 +11,7 @@
 
 @include foundation-everything;
 
+@import "teaser";
 @import "icons";
 @import "wp-classes";
 @import "tinymce";
@@ -21,7 +22,6 @@
 @import "layout";
 @import "components";
 @import "owl-theme";
-// @import "animation";
 @import "animate";
 @import "footer";
 @import "keyboardnav";
