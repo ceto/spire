@@ -26,7 +26,7 @@
 .typed-cursor{
     opacity: 1;
     color:$primary-color;
-    animation: blink 0.7s infinite;
+    animation: blink .75s infinite;
 }
 @keyframes blink{
     0% { opacity:1; }

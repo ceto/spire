@@ -78,7 +78,6 @@
       display: inline-block;
     }
 
-
   }
   > div.owl-next {
     margin-left: 1px;
@@ -91,6 +90,35 @@
     //background-color: $white;
     overflow:hidden;
   }
+}
+
+.popgalcarousel {
+  a.popimg {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+  }
+  .owl-nav {
+    bottom:0;
+    opacity: 0;
+    transition: opacity .4s ease-in;
+    [data-whatinput=touch] & {
+      opacity:1;
+    }
+    > div {
+      padding-top: .666em;
+      font-size: .666rem;
+    }
+  }
+
+  &:hover {
+    .owl-nav {
+      opacity: 1;
+    }
+  }
+
+
 }
 
 .whatwedocarousel, .processcarousel, .projectcarousel {

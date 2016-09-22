@@ -21,11 +21,11 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
     //window.location.href = $('.homelogo').data('realhome');
     $('.thecover').addClass('rejtve');
     $('.typewriter').typed({
-      strings: ['The bespoke creative agency', 'delivering Inspired original design', 'to', 'The commercial real estate world'],
+      strings: ['The bespoke creative agency', 'delivering Inspired original design', 'to the commercial real estate world'],
       // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
       stringsElement: null,
       // typing speed
-      typeSpeed: 10,
+      typeSpeed: 20,
       // time before typing starts
       startDelay: 0,
       // backspacing speed
@@ -49,16 +49,27 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
 
       // call when done callback function
       callback: function() {
-        $('.top-bar').addClass('darkened');
-        $('.document').addClass('docfade');
-        window.location.href = $('.homelogo').data('realhome');
+        //$('.document').removeClass('docfade');
+
+        setTimeout(function(){
+          $('.document').addClass('docfade');
+
+        }, 1000);
+        setTimeout(function(){
+          $('.top-bar').addClass('darkened');
+          window.location.href = $('.homelogo').data('realhome');
+        }, 1000);
       },
 
       // starting callback function before each string
-      preStringTyped: function() {},
+      preStringTyped: function() {
+        //$('.document').removeClass('docfade');
+      },
 
       //callback for every typed string
-      onStringTyped: function() {},
+      onStringTyped: function() {
+        //$('.document').addClass('docfade');
+      },
 
       // callback for reset
       resetCallback: function() {}
@@ -295,6 +306,23 @@ $(function() {
   }).init();
 });
 
+
+var popgalcarousel = $('.popgalcarousel').owlCarousel({
+    smartSpeed:500,
+    margin:0,
+    autoHeight:true,
+    loop:true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    // mouseDrag:false,
+    // touchDrag:false,
+    // pullDrag:false,
+    items:1,
+    nav:true,
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
+    itemElement: 'div'
+});
 
 
 var whatwedocarousel = $('.whatwedocarousel').owlCarousel({

@@ -63,6 +63,7 @@
       text-transform: uppercase;
       font-size: .666rem;
       // transition:all .4s ease .4s;
+      transition: all .2s;
       min-width: rem-calc(95);
       &.active {
         color: $primary-color;

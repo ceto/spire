@@ -12,20 +12,28 @@
       <?php while ( have_rows('areas') ) : the_row(); ?>
       <div class="column">
         <div class="card card--simple">
-          <figure class="card__illustration">
-            <?php
-              $image = get_sub_field('illustration');
-              $popimage = get_sub_field('popup_image');
-              $popimg = wp_get_attachment_image_src($popimage['id'], 'full' );
-            ?>
-            <a class="popimg" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>">
-              <?= wp_get_attachment_image($image['id'], 'medium' ); ?>
-            </a>
-          </figure>
+          <?php $wgallery = get_sub_field('popup_gallery'); ?>
+          <?php
+            if( $wgallery ): ?>
+            <figure class="card__illustration">
+              <div class="popgal owl-carousel popgalcarousel">
+                <?php foreach( $wgallery as $image ): ?>
+                <?php
+                    $popimg = wp_get_attachment_image_src($image['id'], 'full' );
+                ?>
+                <a class="popimg" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>">
+                  <?= wp_get_attachment_image($image['id'], 'medium' ); ?>
+                </a>
+                <?php endforeach; ?>
+              </div>
+
+            </figure>
+            <?php endif; ?>
           <h4 class="card__title">
             <?php the_sub_field('area_title'); ?>
           </h4>
           <div class="card__text"><?php the_sub_field('description'); ?></div>
+
         </div>
       </div>
       <?php endwhile; ?>
