@@ -53,6 +53,8 @@ function setup() {
 
   add_image_size( 'largethumb', '1024', '1024', true );
 
+  add_image_size( 'small', '640', '9999', false );
+
   //add_image_size( 'xlarge', '1280', '9999', false );
 
 

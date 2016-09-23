@@ -22,7 +22,7 @@
                     $popimg = wp_get_attachment_image_src($image['id'], 'full' );
                 ?>
                 <a class="popimg" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>">
-                  <?= wp_get_attachment_image($image['id'], 'medium' ); ?>
+                  <?= wp_get_attachment_image($image['id'], 'small' ); ?>
                 </a>
                 <?php endforeach; ?>
               </div>
