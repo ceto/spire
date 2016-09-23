@@ -23,11 +23,11 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
     $('.typewriter').typed({
       strings: ['The bespoke creative agency', 'delivering Inspired original design', 'to the commercial real estate world'],
       // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-      stringsElement: null,
+      stringsElement: $('.teasercont'),
       // typing speed
       typeSpeed: 20,
       // time before typing starts
-      startDelay: 0,
+      startDelay: 500,
       // backspacing speed
       backSpeed: 0,
       // shuffle the strings
@@ -41,7 +41,7 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
       // show cursor
       showCursor: true,
       // character for cursor
-      cursorChar: "|",
+      cursorChar: "",
       // attribute to type (null == text)
       attr: null,
       // either html or text
@@ -53,8 +53,7 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
 
         setTimeout(function(){
           $('.document').addClass('docfade');
-
-        }, 1000);
+        }, 500);
         setTimeout(function(){
           $('.top-bar').addClass('darkened');
           window.location.href = $('.homelogo').data('realhome');
@@ -322,6 +321,49 @@ var popgalcarousel = $('.popgalcarousel').owlCarousel({
     nav:true,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     itemElement: 'div'
+});
+
+
+
+var memberscarousel = $('.memberscarousel').owlCarousel({
+    //margin:32,
+    smartSpeed:500,
+    //autoWidth:true,
+    // mouseDrag:false,
+    // touchDrag:false,
+    // pullDrag:false,
+    autoHeight:true,
+    loop:false,
+    items:1,
+    nav:false,
+    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            margin:24
+        },
+        540:{
+            items:3,
+            margin:24
+        },
+        768:{
+            items:3,
+            margin:32
+        },
+        1024:{
+            items:4,
+            margin:32
+        },
+        1200:{
+            items:5,
+            margin:32
+        },
+        1440:{
+            items:5,
+            margin:32
+        }
+    }
 });
 
 

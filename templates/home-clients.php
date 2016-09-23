@@ -8,8 +8,8 @@
 </div>
 
 <div class="row">
-  <div class="columns tablet-10 large-8 tablet-push-2">
-    <div class="row expanded small-up-3 medium-up-4 acollapse">
+  <div class="columns tablet-10 tablet-push-1 large-8 large-push-2">
+    <div class="row expanded small-up-3 medium-up-4">
       <?php while ( have_rows('clients') ) : the_row(); ?>
         <div class="column">
           <figure class="clientlogo">
