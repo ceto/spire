@@ -82,6 +82,7 @@
   //background-color: rgba($primary-color,.875);
   > div {
     display: inline-block;
+    overflow:hidden;
     width:2em;
     height:2em;
     background-color: $primary-color;
