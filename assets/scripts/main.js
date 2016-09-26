@@ -14,74 +14,7 @@
 
 $(document).foundation();
 
-if ( $('body').hasClass('page-template-tmpl-landing') ) {
-  Pace.on('done', function() {
-    $('.thecover').addClass('opening');
-    $('.top-bar').removeClass('darkened');
-    //window.location.href = $('.homelogo').data('realhome');
-    $('.thecover').addClass('rejtve');
-    $('.typewriter').typed({
-      strings: ['The bespoke creative agency', 'delivering Inspired original design', 'to the commercial real estate world'],
-      // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-      stringsElement: $('.teasercont'),
-      // typing speed
-      typeSpeed: 20,
-      // time before typing starts
-      startDelay: 500,
-      // backspacing speed
-      backSpeed: 0,
-      // shuffle the strings
-      shuffle: false,
-      // time before backspacing
-      backDelay: 500,
-      // loop
-      loop: false,
-      // false = infinite
-      loopCount: false,
-      // show cursor
-      showCursor: true,
-      // character for cursor
-      cursorChar: "",
-      // attribute to type (null == text)
-      attr: null,
-      // either html or text
-      contentType: 'html',
 
-      // call when done callback function
-      callback: function() {
-        //$('.document').removeClass('docfade');
-
-        setTimeout(function(){
-          $('.document').addClass('docfade');
-        }, 500);
-        setTimeout(function(){
-          $('.top-bar').addClass('darkened');
-          window.location.href = $('.homelogo').data('realhome');
-        }, 1000);
-      },
-
-      // starting callback function before each string
-      preStringTyped: function() {
-        //$('.document').removeClass('docfade');
-      },
-
-      //callback for every typed string
-      onStringTyped: function() {
-        //$('.document').addClass('docfade');
-      },
-
-      // callback for reset
-      resetCallback: function() {}
-    });
-
-
-
-  });
-} else {
-  Pace.on('done', function() {
-    $('.top-bar').removeClass('darkened');
-  });
-}
 
 
 $.each($('.card, .membersquare, .projectsquare, .clientlogo'), function(i, el){
@@ -202,6 +135,10 @@ $('document').ready(function() {
 
 
 });
+
+
+
+
 
 $( window ).on('resize', function() {
   resizeProjectCarousel();
@@ -510,6 +447,82 @@ $('.btn.right').click(function(e){
     break;
   }
 });
+
+
+
+
+if ( $('body').hasClass('page-template-tmpl-landing') ) {
+  Pace.on('done', function() {
+    $('.thecover').addClass('opening');
+    $('.top-bar').removeClass('darkened');
+    //window.location.href = $('.homelogo').data('realhome');
+    $('.thecover').addClass('rejtve');
+    $('.typewriter').typed({
+      strings: ['The bespoke creative agency', 'delivering Inspired original design', 'to the commercial real estate world'],
+      // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+      stringsElement: $('.teasercont'),
+      // typing speed
+      typeSpeed: 20,
+      // time before typing starts
+      startDelay: 500,
+      // backspacing speed
+      backSpeed: 0,
+      // shuffle the strings
+      shuffle: false,
+      // time before backspacing
+      backDelay: 500,
+      // loop
+      loop: false,
+      // false = infinite
+      loopCount: false,
+      // show cursor
+      showCursor: true,
+      // character for cursor
+      cursorChar: "",
+      // attribute to type (null == text)
+      attr: null,
+      // either html or text
+      contentType: 'html',
+
+      // call when done callback function
+      callback: function() {
+        //$('.document').removeClass('docfade');
+
+        setTimeout(function(){
+          $('.document').addClass('docfade');
+        }, 500);
+        setTimeout(function(){
+          $('.top-bar').addClass('darkened');
+          window.location.href = $('.homelogo').data('realhome');
+        }, 1000);
+      },
+
+      // starting callback function before each string
+      preStringTyped: function() {
+        //$('.document').removeClass('docfade');
+      },
+
+      //callback for every typed string
+      onStringTyped: function() {
+        //$('.document').addClass('docfade');
+      },
+
+      // callback for reset
+      resetCallback: function() {}
+    });
+
+
+
+  });
+} else {
+  Pace.on('done', function() {
+    $('.top-bar').removeClass('darkened');
+    popgalcarousel.trigger('refresh.owl.carousel');
+    projectcarousel.trigger('refresh.owl.carousel');
+    memberscarousel.trigger('refresh.owl.carousel');
+    approachcarousel.trigger('refresh.owl.carousel');
+  });
+}
 
 
 
