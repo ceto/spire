@@ -25,7 +25,7 @@
               <div id="plist-<?= $i ?>" class="plist">
                 <?php foreach( $wgallery as $image ): ?>
                   <?php $popimg = wp_get_attachment_image_src($image['id'], 'full' ); ?>
-                  <a class="popimg" data-group="<?= $i ?>" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>"><?= $i ?></a>
+                  <a class="popimg" data-group="<?= $i ?>" href="<?= $popimg[0]; ?>" title="<?php the_sub_field('area_title'); ?>"></a>
                 <?php endforeach; ?>
               </div>
               <?php endif; ?>
