@@ -248,4 +248,16 @@
   }
 }
 
+.wstarter {
+  &:hover, &:focus {
+    outline:none;
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+  }
+}
 
+.plist {
+  display: none;
+}

@@ -92,24 +92,34 @@ $('document').ready(function() {
 
 
   //popimg Gallery popup
-  $('.whatwedogrid').magnificPopup({
-    delegate: 'a.popimg',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
-    closeBtnInside: false,
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('title');
+
+  $('.wstarter').click(function(e) {
+    e.preventDefault();
+    var items = [];
+    $( $(this).attr('href') ).find('.popimg').each(function() {
+      items.push( this );
+    });
+
+    $.magnificPopup.open({
+      items: items,
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile nottootall mfp-with-zoom',
+      closeBtnInside: false,
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [1,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title');
+        }
       }
-    }
+    });
   });
+
 
   //project Gallery popup
   $('.projectcarousel').magnificPopup({
@@ -121,7 +131,7 @@ $('document').ready(function() {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [1,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
@@ -304,34 +314,6 @@ var memberscarousel = $('.memberscarousel').owlCarousel({
 });
 
 
-var whatwedocarousel = $('.whatwedocarousel').owlCarousel({
-    //margin:32,
-    smartSpeed:500,
-    //autoWidth:true,
-    // mouseDrag:false,
-    // touchDrag:false,
-    // pullDrag:false,
-    autoHeight:true,
-    loop:true,
-    items:1,
-    nav:true,
-    navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            margin:0
-        },
-        540:{
-            items:2,
-            margin:24
-        },
-        1024:{
-            items:3,
-            margin:32
-        }
-    }
-});
 
 var approachcarousel = $('.approachcarousel').owlCarousel({
     //margin:32,
@@ -517,7 +499,6 @@ if ( $('body').hasClass('page-template-tmpl-landing') ) {
 } else {
   Pace.on('done', function() {
     $('.top-bar').removeClass('darkened');
-    popgalcarousel.trigger('refresh.owl.carousel');
     projectcarousel.trigger('refresh.owl.carousel');
     memberscarousel.trigger('refresh.owl.carousel');
     approachcarousel.trigger('refresh.owl.carousel');
