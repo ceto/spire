@@ -1,11 +1,22 @@
+<?php
+  $hlines = Array();
+  $hsublines = Array();
+  while ( have_rows('headlines') ) {
+    the_row();
+    $hlines[] = get_sub_field("headline_title",false);
+    $hsublines[] = get_sub_field("headline_subtitle",false);
+  };
+  $i=0;
+?>
+
 <div class="approachcarousel owl-carousel">
   <?php while ( have_rows('process') ) : the_row(); ?>
   <div class="item ps">
     <div class="row">
       <div class="columns">
         <h2 class="prettytitle wow fadeInRight">
-        <?php the_field("pr_section_title"); ?>
-        <small><?php the_field("pr_section_subtitle"); ?></small>
+        <?= $hlines[$i]; ?>
+        <small><?= $hsublines[$i++]; ?></small>
         </h2>
       </div>
     </div>

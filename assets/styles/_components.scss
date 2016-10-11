@@ -103,11 +103,20 @@
 .card__illustration {
   margin:0 0 1rem;
   padding:0;
-  a.popimg {
+  a {
     display: block;
+    filter: saturate(2.875) grayscale(.875);
+    transition: filter .2s;
     [data-whatinput=mouse] & {
       outline:0;
     }
+    &:hover, &:focus {
+      filter: saturate(1) grayscale(0);
+    }
+  }
+
+  img {
+    display: block;
   }
 }
 
