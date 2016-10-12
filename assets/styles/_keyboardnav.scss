@@ -14,8 +14,13 @@
 
   .single-project & {
     opacity: 1;
+    z-index: 12;
+    bottom:0;
   }
 }
+
+
+
 .keyboard .holder {
   @include clearfix();
   position: relative;
