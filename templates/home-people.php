@@ -19,7 +19,7 @@
   ?>
 
   <div class="row">
-    <div class="columns tablet-10 tablet-push-1 large-10 large-push-1 xlarge-12 xlarge-push-0 xxlarge-12 xxlarge-push-0">
+    <div class="columns tablet-10 tablet-push-1 large-10 large-push-1">
       <section class="memberscarousel owl-carousel">
         <?php while ($the_members->have_posts()) : $the_members->the_post(); ?>
           <div><?php get_template_part( 'templates/member', 'square' ); ?></div>

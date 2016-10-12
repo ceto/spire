@@ -309,11 +309,11 @@ var memberscarousel = $('.memberscarousel').owlCarousel({
             margin:32
         },
         1200:{
-            items:5,
+            items:4,
             margin:32
         },
         1440:{
-            items:5,
+            items:4,
             margin:32
         }
     }
