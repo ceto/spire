@@ -172,6 +172,11 @@ $('.top-bar-right').on('update.zf.magellan', function() {
     $('.keyboard').removeClass('active');
     if (section.attr('id')==='approach') {
       $('.keyboard').addClass('active');
+      $('a[data-owltarget]').attr('data-owltarget','approach');
+    }
+    if (section.attr('id')==='people') {
+      $('.keyboard').addClass('active');
+      $('a[data-owltarget]').attr('data-owltarget','members');
     }
   },500);
 });
@@ -185,7 +190,7 @@ $(document.documentElement).keydown(function(event) {
         $('.realkeyboard .btn.down').addClass('pressed');
       break;
       case 37:
-        if ($('.primarynav .menu-approach a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
           $('.realkeyboard .btn.left').addClass('pressed');
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
@@ -194,7 +199,7 @@ $(document.documentElement).keydown(function(event) {
         $('.keyboard .button.left').addClass('pressed');
       break;
       case 39:
-        if ($('.primarynav .menu-approach a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
           $('.realkeyboard .btn.right').addClass('pressed');
         }
         if ($('.single-project .primarynav .menu-the-work a').hasClass('active')) {
@@ -221,7 +226,7 @@ $(document.documentElement).keyup(function(event) {
       }
       break;
       case 37:
-        if ($('.primarynav .menu-approach a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
           $('.realkeyboard .btn.left').click();
         }
         if ($('body').hasClass('single-project')) {
@@ -229,7 +234,7 @@ $(document.documentElement).keyup(function(event) {
         }
       break;
       case 39:
-        if ($('.primarynav .menu-approach a').hasClass('active')) {
+        if ($('.primarynav .menu-approach a').hasClass('active') || $('.primarynav .menu-people a').hasClass('active')) {
           $('.realkeyboard .btn.right').click();
         }
         if ($('body').hasClass('single-project')) {
@@ -283,6 +288,7 @@ var memberscarousel = $('.memberscarousel').owlCarousel({
     loop:false,
     items:1,
     nav:false,
+    slideBy:3,
     navText: ['<i class="icon icon--chevron-left">', '<i class="icon icon--chevron-right">'],
     responsiveClass:true,
     responsive:{
@@ -411,6 +417,9 @@ $('.btn.left').on('click', function(e){
     case 'approach':
      approachcarousel.trigger('prev.owl.carousel');
     break;
+    case 'members':
+     memberscarousel.trigger('prev.owl.carousel');
+    break;
     case 'project':
       projectcarousel.trigger('prev.owl.carousel');
     break;
@@ -423,6 +432,9 @@ $('.btn.right').click(function(e){
   switch (owltarget) {
     case 'approach':
       approachcarousel.trigger('next.owl.carousel');
+    break;
+    case 'members':
+      memberscarousel.trigger('next.owl.carousel');
     break;
     case 'project':
       projectcarousel.trigger('next.owl.carousel');

@@ -1,8 +1,9 @@
 .memberscarousel {
   padding-bottom: 2rem;
   .owl-dots {
-    //display: none;
+    display: none;
     position: absolute;
+    z-index: 12;
     bottom:0;
     left:0;
     width: 100%;
