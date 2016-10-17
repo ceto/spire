@@ -6,6 +6,7 @@
   <meta http-equiv="refresh" content="15; url=<?php the_permalink(45); ?>">
   <?php endif; ?>
   <?php wp_head(); ?>
+  <?php if ( (!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options') ): ?>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,4 +14,5 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WNS2L7');</script>
   <!-- End Google Tag Manager -->
+  <?php endif; ?>
 </head>

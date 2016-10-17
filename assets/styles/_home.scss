@@ -39,7 +39,22 @@
   right:0;
 }
 
-
+//fixing some weird squres
+#contact {
+ position: relative;
+ &:before {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left:0; top:0;
+  background-color: $primary-color;
+ }
+ .sitefooter {
+  position: relative;
+ }
+}
 
 
 @keyframes "heartpulse" {
