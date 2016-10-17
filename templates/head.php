@@ -6,6 +6,10 @@
   <meta http-equiv="refresh" content="15; url=<?php the_permalink(45); ?>">
   <?php endif; ?>
   <?php wp_head(); ?>
+  <link rel="apple-touch-icon" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/mstile-144x144.png">
   <?php if ( (!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options') ): ?>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
