@@ -12,25 +12,25 @@
 .skipintro {
   display: inline-block;
   font-weight: $global-weight-bold;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1;
   position: absolute;
-  bottom:1rem;
-  right:2vw;
-  color:$black;
+  top:-3rem;
+  right:0;
+  //color:$black;
   &:hover, &:focus {
-    color:$primary-color;
+    //color:$primary-color;
   }
   @include breakpoint('tablet') {
-     bottom:2vw;
+     top:-4rem;
   }
 
-  .icon {
-    display: inline-block;
-    font-size: .75em;
-    //transform: translateY(-.1em);
-    margin-left: .125em;
-  }
+  // .icon {
+  //   display: inline-block;
+  //   font-size: .75em;
+  //   //transform: translateY(-.1em);
+  //   margin-left: .125em;
+  // }
 }
 .ps.lala {
   position: absolute;
@@ -40,6 +40,7 @@
   transform:translateY(-50%);
 }
 .teaser {
+  position: relative;
   font-size: 2rem;
   font-weight: $global-weight-bold;
   line-height: $header-lineheight;
