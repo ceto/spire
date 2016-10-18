@@ -6,10 +6,12 @@
   <meta http-equiv="refresh" content="15; url=<?php the_permalink(45); ?>">
   <?php endif; ?>
   <?php wp_head(); ?>
-  <link rel="apple-touch-icon" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/apple-touch-icon.png">
-  <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-TileImage" content="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/mstile-144x144.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/manifest.json">
+  <link rel="mask-icon" href="<?= get_stylesheet_directory_uri();?>/dist/images/favicons/safari-pinned-tab.svg" color="#ff671f">
+  <meta name="theme-color" content="#ffffff">
   <?php if ( (!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options') ): ?>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

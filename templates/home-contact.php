@@ -2,7 +2,7 @@
   <div class="columns">
     <h2 class="prettytitle wow fadeInRight">
     Send us a <span>message!</span>
-    <small>We’ll definitely reply</small>
+    <small>We’ll definitely reply.</small>
     </h2>
   </div>
 </div>
