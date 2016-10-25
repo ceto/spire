@@ -62,7 +62,7 @@ $('document').ready(function() {
 
 
   $('a').click(function(e) {
-    if ( ($(this).attr('href').substr(0,1)!=='#') && ($(this).attr('href').substr(0,6)!=='mailto') && (!$(this).hasClass('popimg'))
+    if ( ($(this).attr('href').substr(0,1)!=='#') && ($(this).attr('href').substr(0,6)!=='mailto') && (!$(this).hasClass('popimg')) && ($(this).attr('target') !== '_blank')
         ) {
       e.preventDefault();
       // $('.thecover').removeClass('rejtve');

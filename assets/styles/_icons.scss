@@ -9,51 +9,63 @@
 }
 
 .icon {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'spire' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'spire' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon--chevron-left:before {
-    content: "\e902";
+  content: "\e902";
 }
 .icon--chevron-right:before {
-    content: "\e903";
+  content: "\e903";
 }
 .icon--chevron-up:before {
-    content: "\e904";
+  content: "\e904";
 }
 .icon--chevron-down:before {
-    content: "\e905";
+  content: "\e905";
 }
 .icon--hamburger:before {
-    content: "\e906";
+  content: "\e906";
 }
 .icon--minus:before {
-    content: "\e907";
+  content: "\e907";
 }
 .icon--plus:before {
-    content: "\e908";
+  content: "\e908";
 }
 .icon--times:before {
-    content: "\e909";
+  content: "\e909";
 }
-.icon--linkedin:before {
-    content: "\e90a";
+.icon--spire:before {
+  content: "\e90d";
+}
+.icon--inspired:before {
+  content: "\e90e";
 }
 .icon--facebook:before {
-    content: "\e90b";
+  content: "\e901";
+}
+.icon--twitter:before {
+  content: "\e90a";
+}
+.icon--instagram:before {
+  content: "\e90b";
+}
+.icon--linkedin:before {
+  content: "\e90c";
 }
 .icon--behance:before {
-    content: "\e900";
+  content: "\e900";
 }
 

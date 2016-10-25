@@ -29,8 +29,10 @@
 
 
 <section id="contact" class="ps ps--accent" data-magellan-target="contact">
+  <div class="contactinner">
   <?php get_template_part('templates/home', 'contact'); ?>
   <?php get_template_part('templates/footer'); ?>
+  </div>
 </section>
 
 
