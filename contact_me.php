@@ -1,10 +1,9 @@
-
 <?php
   define( 'WP_USE_THEMES', FALSE );
   require( '../../../wp-load.php' );
 
 if($_POST) {
-  $to_Email = "tom@spirecreative.com";
+  $to_Email = "info@spirecreative.com";
   $subject = 'Spire Web Message';
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {

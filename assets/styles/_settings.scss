@@ -49,12 +49,12 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #ff671f,
-  //primary: #ed6d16,
+  //primary: #ff671f,
+  primary: #f48326,
   secondary: #6c6c6c,
   success: #000000,
   warning: #6c6c6c,
-  alert: scale-color(#ff671f, $lightness: 14%)
+  alert: scale-color(#f48326, $lightness: 14%)
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
